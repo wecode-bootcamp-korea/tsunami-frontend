@@ -18,5 +18,3 @@ export default class Routes extends Component {
     );
   }
 }
-
-export default Routes;
