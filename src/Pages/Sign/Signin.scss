@@ -1,0 +1,19 @@
+.signin {
+  position: relative;
+  top: 100px;
+  background-color: gray;
+  .login {
+    text-align: center;
+    line-height: 190px;
+    font-size: 48px;
+    font-weight: 300;
+    background-color: #faf9f7;
+  }
+  .member_box {
+    display: flex;
+    .member {
+    }
+    .unmember {
+    }
+  }
+}
