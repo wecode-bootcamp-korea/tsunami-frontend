@@ -1,26 +1,35 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$basis: #ffffff;
+
 .signin {
   position: relative;
   top: 100px;
   font-size: 16px;
-  background-color: gray;
-  .login {
+  .header {
+    height: 190px;
     text-align: center;
     line-height: 190px;
     font-size: 48px;
-    font-weight: 300;
+    font-weight: 350;
     background-color: #faf9f7;
   }
-  .member_wrapper {
+  .memberWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .member_box {
+    padding-top: 50px;
+    background-color: $basis;
+    .memberBox {
       display: flex;
       justify-content: center;
       width: 650px;
-      background-color: rosybrown;
+      background-color: $basis;
       .member {
-        // margin-left: 5%;
         line-height: 50px;
         font-size: 20px;
         width: 50%;
@@ -28,90 +37,85 @@
         border-bottom: 3px solid black;
       }
       .unmember {
-        line-height: 50px;
-        font-size: 20px;
-        width: 50%;
-        text-align: center;
         border-bottom: 3px solid #ddd;
       }
     }
-    .id_box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .idBox {
+      @include center;
       margin-top: 50px;
       width: 405px;
       height: 50px;
-      background-color: pink;
+      background-color: $basis;
       .id {
       }
-      .id_input {
+      .id.Input {
         margin-left: 30px;
         width: 290px;
         height: 50px;
+        border: 1px solid #ccc;
       }
     }
-    .pw_box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .pwBox {
+      @include center;
       margin-top: 15px;
       width: 405px;
-      background-color: yellow;
+      background-color: $basis;
       .pw {
       }
-      .pw_input {
+      .pw.Input {
         margin-left: 18px;
         width: 290px;
         height: 50px;
+        border: 1px solid #ccc;
       }
     }
-    .login_btn {
+    .loginBtn {
       margin-top: 25px;
       width: 405px;
       height: 64px;
       font-size: 20px;
       color: white;
       background-color: black;
+      border: none;
+      border-radius: 3px;
     }
-    .sign_helper_box {
+    .signHelperBox {
       display: flex;
       justify-content: space-around;
       margin: 20px 0px;
       width: 405px;
       font-size: 14px;
-      background-color: tomato;
-      .id_find {
+      color: #555;
+      background-color: $basis;
+      p {
         width: 33%;
         text-align: center;
-        border-right: whitesmoke 1px solid;
+        border-right: #cccccc 1px solid;
       }
-      .pw_find {
-        width: 33%;
-        text-align: center;
-        border-right: whitesmoke 1px solid;
-      }
-      .goto_signup {
-        width: 33%;
-        text-align: center;
+      .gotoSignup {
+        border: none;
       }
     }
-    .sns_wrapper {
+    .snsWrapper {
       width: 650px;
       text-align: center;
-      background-color: yellowgreen;
-      border-top: red 1px solid;
-      .sns_login {
+      background-color: $basis;
+      font-weight: 700;
+      border-top: #ececec 1px solid;
+      .snsLogin {
         font-size: 20px;
         margin: 20px;
       }
-      .sns_images_wrapper {
-        display: flex;
-        justify-content: center;
-        background-color: skyblue;
-        .kakao_box {
+      .snsImagesWrapper {
+        @include center;
+        background-color: $basis;
+        .Box {
+          .Logo {
+            width: 55px;
+          }
+        }
+        .Box.kakao {
           width: 33%;
-          background-color: tan;
         }
       }
     }
