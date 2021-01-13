@@ -19,7 +19,6 @@ header {
         display: flex;
         .navIcon {
             display: flex;
-            flex-direction: row;
             justify-content: flex-end;
             align-items: center;
             padding-right: 80px;
@@ -34,8 +33,6 @@ header {
         ul {
             width: 100%;
             display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
             .menuItem {
                 width: 100%;
                 display: flex;
