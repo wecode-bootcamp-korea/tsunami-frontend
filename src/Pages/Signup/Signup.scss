@@ -150,12 +150,12 @@ $basis: #ffffff;
         }
       }
     }
-    .cellPhoneBox {
+    .PhoneBox {
       margin: 10px 0px 20px;
       @include between;
       @include boxSize;
       background-color: $basis;
-      .cellPhoneNum.Input {
+      .PhoneNum.Input {
         margin-left: 30px;
         @include inputSize;
         border: 1px solid #ccc;
