@@ -7,17 +7,17 @@ export default class Nav extends Component {
     return (
       <div>
         <header>
-          <Link to="#" className="allmenuBtn">
-            <span className="menu-trigger">
-              <img src="/images/align-justify.svg" alt="hamberger" />
-            </span>
-          </Link>
-          <h1 className="logo">
-            <Link to="#">
-              <img src="/images/logo.png" alt="tsunami logo" />
-            </Link>
-          </h1>
           <nav>
+            <Link to="#" className="allmenuBtn">
+              <span className="menu-trigger">
+                <img src="/images/align-justify.svg" alt="hamberger" />
+              </span>
+            </Link>
+            <h1 className="logo">
+              <Link to="#">
+                <img src="/images/logo.png" alt="tsunami logo" />
+              </Link>
+            </h1>
             <ul>
               <li className="stationery">
                 <Link to="#">
