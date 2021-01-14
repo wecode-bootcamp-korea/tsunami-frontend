@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { SIGNUP_API } from "../../config";
 import "./Signup.scss";
 
 class Signup extends Component {
@@ -16,56 +17,23 @@ class Signup extends Component {
     };
   }
 
-  handleNameInput = () => {
+  handleInput = (e) => {
+    const { name, value } = e.target;
     this.setState({
-      name: "e.target.vlaue",
+      [name]: value,
     });
   };
 
-  handleIdInput = () => {
-    this.setState({
-      username: "e.target.value",
-    });
-  };
+  handleInputCheckbox = (e) => {
+    const { name, checked } = e.target;
 
-  handlePwInput = () => {
     this.setState({
-      password: "e.target.value",
-    });
-  };
-
-  handleEmailInput = () => {
-    this.setState({
-      email: "e.target.value",
-    });
-  };
-
-  handlePhoneInput = () => {
-    this.setState({
-      phone_number: "e.target.value",
-    });
-  };
-
-  handleBirthdateInput = () => {
-    this.setState({
-      birthday: "e.target.value",
-    });
-  };
-
-  handleSmsAgreedInput = () => {
-    this.setState({
-      is_sms_agreed: "e.target.value",
-    });
-  };
-
-  handleEmailAgreedInput = () => {
-    this.setState({
-      is_email_agreed: "e.target.value",
+      [name]: checked,
     });
   };
 
   handleSendBtn = () => {
-    fetch("http://192.168.200.135:8000/users/signup", {
+    fetch(SIGNUP_API, {
       method: "POST",
       body: JSON.stringify({
         name: this.state.name,
@@ -85,7 +53,7 @@ class Signup extends Component {
   render() {
     return (
       <div className="signup">
-        <div className="header">회원가입</div>
+        <header>회원가입</header>
         <div className="stepWrapper">
           <div className="stepBox">
             <div className="step agree">STEP1.약관동의</div>
@@ -105,7 +73,8 @@ class Signup extends Component {
               type="text"
               placeholder="이름 입력"
               className="name Input"
-              onChange={this.handleNameInput}
+              name="name"
+              onChange={this.handleInput}
             />
           </div>
           <div className="idBox">
@@ -115,7 +84,8 @@ class Signup extends Component {
                 type="text"
                 placeholder="5~16자, 영문, 숫자 또는 영문+숫자 조합"
                 className="id Input"
-                onChange={this.handleIdInput}
+                name="username"
+                onChange={this.handleInput}
               />
               <button type="submit" className="id btn">
                 중복확인
@@ -129,6 +99,8 @@ class Signup extends Component {
               placeholder="영문/숫자/특수문자 중 2가지 조합, 6~16자 이내"
               className="pw Input"
               id="pw"
+              name="password"
+              onChange={this.handleInput}
             />
           </div>
           <div className="pwGuide">
@@ -155,7 +127,8 @@ class Signup extends Component {
                 type="email"
                 placeholder="이메일 입력"
                 className="email Input"
-                onChange={this.handleEmailInput}
+                name="email"
+                onChange={this.handleInput}
               />
               <button type="submit" className="email btn">
                 중복확인
@@ -168,7 +141,8 @@ class Signup extends Component {
               type="number"
               placeholder="숫자만 입력(11자리)"
               className="PhoneNum Input"
-              onChange={this.handlePhoneInput}
+              name="phone_number"
+              onChange={this.handleInput}
             />
           </div>
           <div className="nonEssential">
@@ -178,7 +152,8 @@ class Signup extends Component {
                 type="number"
                 placeholder="숫자만 입력(8자리)"
                 className="birthdate Input"
-                onChange={this.handleBirthdateInput}
+                name="birthday"
+                onChange={this.handleInput}
               />
             </div>
             <div className="agreeBox">
@@ -188,7 +163,8 @@ class Signup extends Component {
                   <input
                     type="checkbox"
                     className="agree Input"
-                    onChange={this.handleSmsAgreedInput}
+                    name="is_sms_agreed"
+                    onChange={this.handleInputCheckbox}
                   />
                   <label>
                     SMS를 통한 상품 및 이벤트 정보 수신에 동의 합니다. [선택]
@@ -198,7 +174,8 @@ class Signup extends Component {
                   <input
                     type="checkbox"
                     className="agree Input"
-                    onChange={this.handleEmailAgreedInput}
+                    name="is_email_agreed"
+                    onChange={this.handleInputCheckbox}
                   />
                   <label>
                     이메일을 통한 상품 및 이벤트 정보 수신에 동의 합니다. [선택]
