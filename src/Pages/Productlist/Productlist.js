@@ -13,7 +13,6 @@ export default class Productlist extends Component {
   }
 
   componentDidMount = () => {
-    const { productList } = this.state;
     fetch("http://192.168.202.128:3000/data/productlist.json")
       .then((res) => res.json())
       .then((res) => {
