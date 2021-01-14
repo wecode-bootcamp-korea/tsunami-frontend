@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Nav from "../../Components/Nav/Nav";
 import "./Productlist.scss";
-import "../../Styles/reset.scss";
 import Productinfo from "./Productinfo";
 import { PRODUCTLIST } from "../../config";
 
