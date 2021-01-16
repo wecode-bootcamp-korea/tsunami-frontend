@@ -1,38 +1,27 @@
 import React, { Component } from "react";
 import { Stationerydata } from "../Navdata/Stationerydata";
 import { Link } from "react-router-dom";
+import Contents from "./Contents/Contents";
 
 export default class Stationery extends Component {
   render() {
     return (
-      <li>
-        <Link to="#">
-          <span className="menuItem">
-            <small>문구</small>
-            Stationery
-          </span>
-        </Link>
-        <div className="subnav">
-          <ul>
-            {Stationerydata.map((el, idx) => {
-              return (
+      <ul className="subnavBox">
+        {Stationerydata.map((el) => {
+          return (
+            <li className="submenuBox">
+              <Link to="#" className="mainItem">
+                <span>{el.title}</span>
+              </Link>
+              <ul>
                 <li>
-                  <Link to="#" className="mainItem">
-                    <span>{el.title}</span>
-                  </Link>
-                  <ul>
-                    <li>
-                      <Link to="#" key={idx}>
-                        <span>{el.content}</span>
-                      </Link>
-                    </li>
-                  </ul>
+                  <Contents contents={el.content} />
                 </li>
-              );
-            })}
-          </ul>
-        </div>
-      </li>
+              </ul>
+            </li>
+          );
+        })}
+      </ul>
     );
   }
 }

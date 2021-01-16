@@ -1,35 +1,27 @@
 import React, { Component } from "react";
 import { Eventdata } from "../Navdata/Eventdata";
 import { Link } from "react-router-dom";
+import Contents from "./Contents/Contents";
 
 export default class Event extends Component {
   render() {
     return (
-      <li>
-        <Link to="#">
-          <span className="menuItem">
-            <small>이벤트</small>
-            Event
-          </span>
-        </Link>
-        <div className="subnav">
-          <ul>
-            {Eventdata.map((el, idx) => {
-              return (
+      <ul className="subnavBox">
+        {Eventdata.map((el) => {
+          return (
+            <li className="submenuBox">
+              <Link to="#" className="mainItem">
+                <span>{el.title}</span>
+              </Link>
+              <ul>
                 <li>
-                  <ul>
-                    <li>
-                      <Link to="#" key={idx}>
-                        <span>{el.content}</span>
-                      </Link>
-                    </li>
-                  </ul>
+                  <Contents contents={el.content} />
                 </li>
-              );
-            })}
-          </ul>
-        </div>
-      </li>
+              </ul>
+            </li>
+          );
+        })}
+      </ul>
     );
   }
 }

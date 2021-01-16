@@ -1,38 +1,27 @@
 import React, { Component } from "react";
 import { Livingdata } from "../Navdata/Livingdata";
 import { Link } from "react-router-dom";
+import Contents from "./Contents/Contents";
 
 export default class Living extends Component {
   render() {
     return (
-      <li>
-        <Link to="#">
-          <span className="menuItem">
-            <small>리빙&amp;라이프</small>
-            Living&amp;Life
-          </span>
-        </Link>
-        <div className="subnav">
-          <ul>
-            {Livingdata.map((el, idx) => {
-              return (
+      <ul className="subnavBox">
+        {Livingdata.map((el) => {
+          return (
+            <li className="submenuBox">
+              <Link to="#" className="mainItem">
+                <span>{el.title}</span>
+              </Link>
+              <ul>
                 <li>
-                  <Link to="#" className="mainItem">
-                    <span>{el.title}</span>
-                  </Link>
-                  <ul>
-                    <li>
-                      <Link to="#" key={idx}>
-                        <span>{el.content}</span>
-                      </Link>
-                    </li>
-                  </ul>
+                  <Contents contents={el.content} />
                 </li>
-              );
-            })}
-          </ul>
-        </div>
-      </li>
+              </ul>
+            </li>
+          );
+        })}
+      </ul>
     );
   }
 }

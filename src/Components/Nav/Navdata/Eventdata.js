@@ -1,5 +1,5 @@
 export const Eventdata = [
-  { content: "이벤트" },
-  { content: "기획전" },
-  { content: "아울렛" },
+  {
+    content: ["이벤트", "기획전", "아울렛"],
+  },
 ];

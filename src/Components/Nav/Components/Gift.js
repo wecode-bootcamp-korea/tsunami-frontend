@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import { Storypickdata } from "../Navdata/Storypickdata";
+import { Giftdata } from "../Navdata/Giftdata";
 import { Link } from "react-router-dom";
 import Contents from "./Contents/Contents";
 
-export default class Storypick extends Component {
+export default class Gift extends Component {
   render() {
     return (
       <ul className="subnavBox">
-        {Storypickdata.map((el) => {
+        {Giftdata.map((el) => {
           return (
             <li className="submenuBox">
               <Link to="#" className="mainItem">
