@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Nav from "../../Components/Nav/Nav";
 import "./Productlist.scss";
 import Productinfo from "./Productinfo";
-import { PRODUCTLIST } from "../../config";
+import { Link } from "react-router-dom";
+// import { PRODUCTLIST } from "../../config";
 
 export default class Productlist extends Component {
   constructor() {
@@ -30,119 +31,119 @@ export default class Productlist extends Component {
         <main>
           <div className="inner">
             <div className="categroyArea">
-              <a href="">
-                <h2 className=""></h2>
-              </a>
+              <Link href="">
+                <h2 className="">test</h2>
+              </Link>
               <ul className="bottomLine">
                 <li className="title active">
-                  <a href="#">Stationery</a>
+                  <Link href="#">Stationery</Link>
                 </li>
               </ul>
               <ul className="contentList">
                 <li className="contentBox">
-                  <a href="#" className="listTop">
+                  <Link href="#" className="listTop">
                     프리미엄 펜
-                  </a>
+                  </Link>
                   <ul>
                     <li>
-                      <a href="#">153프리미엄</a>
+                      <Link href="#">153프리미엄</Link>
                     </li>
                     <li>
-                      <a href="#">데스크펜/스마트펜</a>
+                      <Link href="#">데스크펜/스마트펜</Link>
                     </li>
                     <li>
-                      <a href="#">파카</a>
+                      <Link href="#">파카</Link>
                     </li>
                     <li>
-                      <a href="#">카렌다쉬</a>
+                      <Link href="#">카렌다쉬</Link>
                     </li>
                     <li>
-                      <a href="#">카웨코</a>
+                      <Link href="#">카웨코</Link>
                     </li>
                     <li>
-                      <a href="#">매뉴스크립트</a>
+                      <Link href="#">매뉴스크립트</Link>
                     </li>
                   </ul>
                 </li>
                 <li className="contentBox">
-                  <a href="#" className="listTop">
+                  <Link href="#" className="listTop">
                     펜/펜슬
-                  </a>
+                  </Link>
                   <ul>
                     <li>
-                      <a href="#">볼펜</a>
+                      <Link href="#">볼펜</Link>
                     </li>
                     <li>
-                      <a href="#">수성펜/사인펜</a>
+                      <Link href="#">수성펜/사인펜</Link>
                     </li>
                     <li>
-                      <a href="#">연필/샤프</a>
+                      <Link href="#">연필/샤프</Link>
                     </li>
                     <li>
-                      <a href="#">형광펜</a>
+                      <Link href="#">형광펜</Link>
                     </li>
                   </ul>
                 </li>
                 <li className="contentBox">
-                  <a href="#" className="listTop">
+                  <Link href="#" className="listTop">
                     마카
-                  </a>
+                  </Link>
                   <ul>
                     <li>
-                      <a href="#">네임펜/유성매직</a>
+                      <Link href="#">네임펜/유성매직</Link>
                     </li>
                     <li>
-                      <a href="#">생활/보드마카</a>
+                      <Link href="#">생활/보드마카</Link>
                     </li>
                     <li>
-                      <a href="#">패브릭/세라믹마카</a>
+                      <Link href="#">패브릭/세라믹마카</Link>
                     </li>
                   </ul>
                 </li>
                 <li className="contentBox">
-                  <a href="#" className="listTop">
+                  <Link href="#" className="listTop">
                     컬러링/브러쉬
-                  </a>
+                  </Link>
                   <ul>
                     <li>
-                      <a href="#">컬러링펜</a>
+                      <Link href="#">컬러링펜</Link>
                     </li>
                     <li>
-                      <a href="#">브러쉬펜</a>
+                      <Link href="#">브러쉬펜</Link>
                     </li>
                     <li>
-                      <a href="#">미술용품</a>
+                      <Link href="#">미술용품</Link>
                     </li>
                   </ul>
                 </li>
                 <li className="contentBox">
-                  <a href="#" className="listTop">
+                  <Link href="#" className="listTop">
                     디자인 문구
-                  </a>
+                  </Link>
                   <ul>
                     <li>
-                      <a href="#">몰스킨</a>
+                      <Link href="#">몰스킨</Link>
                     </li>
                     <li>
-                      <a href="#">다이어리/노트</a>
+                      <Link href="#">다이어리/노트</Link>
                     </li>
                     <li>
-                      <a href="#">카드/봉투</a>
+                      <Link href="#">카드/봉투</Link>
                     </li>
                     <li>
-                      <a href="#">파우치</a>
+                      <Link href="#">파우치</Link>
                     </li>
                     <li>
-                      <a href="#">풀/스티커/테이프</a>
+                      <Link href="#">풀/스티커/테이프</Link>
                     </li>
                     <li>
-                      <a href="#">스탬프</a>
+                      <Link href="#">스탬프</Link>
                     </li>
                     <li>
-                      <a href="#">데스크용품</a>
+                      <Link href="#">데스크용품</Link>
                     </li>
                     <li>
-                      <a href="#">모나미 MD상품</a>
+                      <Link href="#">모나미 MD상품</Link>
                     </li>
                   </ul>
                 </li>

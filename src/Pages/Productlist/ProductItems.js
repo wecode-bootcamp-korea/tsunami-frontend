@@ -1,19 +1,17 @@
 import React, { Component } from "react";
 import "./ProductItems.scss";
+import { Link } from "react-router-dom";
 
 export default class ProductItems extends Component {
-  constructor() {
-    super();
-  }
   render() {
-    const { id, image_url, name, price, maker } = this.props;
+    const { image_url, name, price, maker } = this.props;
     return (
       <ul>
         <li>
           <div className="itemList">
-            <a href="#">
+            <Link href="#">
               <span className="thumbImg">
-                <img src={image_url} />
+                <img src={image_url} alt="제품이미지" />
               </span>
               <span className="info">
                 <span className="txtBrand">{maker}</span>
@@ -22,7 +20,7 @@ export default class ProductItems extends Component {
                 </span>
                 <span className="txtPrice">{price}원</span>
               </span>
-            </a>
+            </Link>
           </div>
         </li>
       </ul>

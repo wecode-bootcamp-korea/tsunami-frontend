@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import ProductItems from "./ProductItems";
 
 export default class Productinfo extends Component {
-  constructor() {
-    super();
-  }
-
   render() {
     const { productInfo } = this.props;
     return (

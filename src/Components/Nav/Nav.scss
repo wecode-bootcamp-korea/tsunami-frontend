@@ -3,69 +3,92 @@
     margin: 0;
     header {
         display: flex;
-        .allmenuBtn {
-            img {
-                width: 30px;
-            }
-        }
-        .logo {
-            img {
-                padding: 0 20px 0 20px;
-            }
-        }
+        width: 100%;
         nav {
+            position: fixed;
             width: 100%;
             background-color: white;
             overflow: hidden;
             display: flex;
-            .navIcon {
+            .navWrapper{
                 display: flex;
-                flex-direction: row;
-                justify-content: flex-end;
-                align-items: center;
-                padding-right: 80px;
+                width: 1700px;
+            }
+            .allmenuBtn {
                 img {
                     width: 25px;
-                    margin: auto 13px;
-                }
-                img:hover {
-                    cursor: pointer;
+                    margin: 35px 0 0 80px;
                 }
             }
-            ul {
+            .logo {
+                img {
+                    margin: 35px 40px 0 40px; 
+                    width: 150px;
+                }
+            }
+            .naviconBox {
                 width: 100%;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                .menuItem {
+                padding-top: 25px;
+                .navIcon {
+                    display: flex;
+                    justify-content: flex-end;
+                    padding-right: 82px;
                     width: 100%;
+                    img {
+                        width: 25px;
+                        margin: 10px;
+                    }
+                    img:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .subnav {
+                display: flex;
+                .subnavBox {
+                    background-color: rgba(250, 250, 250, 0.5);
+                    margin-left: 280px;
+                    width: 100%;
+                    padding-top: 30px;
+                    display: flex;
+                    justify-content: space-evenly;
+                    padding-bottom: 30px;
+                    .submenuBox {
+                        display: flex;
+                        flex-direction: column;
+                        span {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+                }
+                    .mainItem {
+                        font-weight: bold;
+                    }
+            }
+            ul {
+                display: flex;
+                .menuItem {
                     display: flex;
                     flex-direction: column;
                     font-weight: bold;
                     font-size: 18px;
-                    padding: 30px 20px 30px 20px;
+                    margin: 30px 20px 0 20px;
+                    padding-bottom: 30px;
                     &:hover {
                         color: red;
+                        cursor: pointer;
                         border-bottom: solid 3px red;
+                        small {
+                            opacity: 1;
+                        }
                     }
-                }
-                small {
-                    display: flex;
-                    flex-direction: row-reverse;
-                    font-weight: normal;
-                    font-size: small;
-                }
-                .subnav {
-                    display: flex;
-                    display: none;
-                    &:hover {
-                    }
-                    .mainItem {
-                        font-weight: bold;
-                    }
-                    ul {
+                    small {
+                        opacity: 0;
                         display: flex;
-                        flex-direction: column;
+                        justify-content: flex-end;
+                        font-weight: normal;
+                        font-size: small;
                     }
                 }
                 
