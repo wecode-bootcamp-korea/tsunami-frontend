@@ -2,28 +2,25 @@
     box-sizing: border-box;
     margin: 0;
     header {
-        // background-color: burlywood;
         display: flex;
         width: 100%;
         nav {
-            // background-color: coral;
             position: fixed;
             width: 100%;
+            background-color: white;
+            overflow: hidden;
             display: flex;
             .navWrapper{
-                // background-color: darkblue;
                 display: flex;
                 width: 1700px;
             }
             .allmenuBtn {
-                // background-color: cornflowerblue;
                 img {
                     width: 25px;
                     margin: 35px 0 0 80px;
                 }
             }
             .logo {
-                // background-color: crimson;
                 img {
                     margin: 35px 40px 0 40px; 
                     width: 150px;
@@ -31,14 +28,12 @@
             }
             .naviconBox {
                 width: 100%;
-                // background-color: darkblue;
                 padding-top: 25px;
                 .navIcon {
                     display: flex;
                     justify-content: flex-end;
                     padding-right: 82px;
                     width: 100%;
-                    // background-color: brown;
                     img {
                         width: 25px;
                         margin: 10px;
@@ -59,6 +54,8 @@
                     justify-content: space-evenly;
                     padding-bottom: 30px;
                     .submenuBox {
+                        display: flex;
+                        flex-direction: column;
                         span {
                             display: flex;
                             flex-direction: column;
@@ -66,15 +63,12 @@
                     }
                 }
                     .mainItem {
-                        display: flex;
-                        justify-content: column;
                         font-weight: bold;
                     }
             }
             ul {
                 display: flex;
                 .menuItem {
-                    // background-color: cyan;
                     display: flex;
                     flex-direction: column;
                     font-weight: bold;
@@ -97,6 +91,7 @@
                         font-size: small;
                     }
                 }
+                
             }
         }
     }
