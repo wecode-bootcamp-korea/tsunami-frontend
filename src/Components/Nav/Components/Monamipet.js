@@ -7,15 +7,15 @@ export default class Monamipet extends Component {
   render() {
     return (
       <ul className="subnavBox">
-        {Monamipetdata.map((el) => {
+        {Monamipetdata.map((menu) => {
           return (
             <li className="submenuBox">
               <Link to="#" className="mainItem">
-                <span>{el.title}</span>
+                <span>{menu.title}</span>
               </Link>
               <ul>
                 <li>
-                  <Contents contents={el.content} />
+                  <Contents contents={menu.content} />
                 </li>
               </ul>
             </li>
