@@ -27,3 +27,27 @@
 }
 
 $basis: #ffffff;
+
+.snsWrapper {
+  @include center;
+  display: flex;
+  flex-direction: column;
+  width: 405px;
+  text-align: center;
+  font-weight: 700;
+  border-top: #ececec 1px solid;
+  .snsLogin {
+    font-size: 20px;
+    margin: 20px;
+  }
+  .snsImagesWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 405px;
+    .Box {
+      .Logo {
+        width: 55px;
+      }
+    }
+  }
+}

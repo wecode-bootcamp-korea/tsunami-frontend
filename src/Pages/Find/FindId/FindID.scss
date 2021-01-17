@@ -1,0 +1,66 @@
+$basis: #ffffff;
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.findId {
+  animation: fadein 2s;
+  font-size: 16px;
+  background-color: $basis;
+  .findWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .signBox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      width: 405px;
+
+      .Input {
+        margin-left: 30px;
+        width: 290px;
+        height: 50px;
+        border: 1px solid #ccc;
+      }
+    }
+    .name.signBox {
+      margin-top: 50px;
+    }
+    .info.active {
+      display: flex;
+      margin-right: 60px;
+      font-size: 14px;
+      color: red;
+    }
+    .findIdBtn {
+      margin-top: 25px;
+      width: 405px;
+      height: 64px;
+      font-size: 20px;
+      color: $basis;
+      background-color: black;
+      border: none;
+      border-radius: 3px;
+    }
+    .info.box {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      width: 405px;
+      font-size: 13px;
+      font-weight: 300;
+      color: #999;
+      span:last-child {
+        margin-top: 2px;
+      }
+    }
+  }
+}

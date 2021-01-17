@@ -10,6 +10,12 @@
   align-items: center;
 }
 
+@mixin around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 @mixin inputSize {
   width: 490px;
   height: 40px;
@@ -18,11 +24,6 @@
 @mixin boxSize {
   width: 650px;
   height: 40px;
-}
-
-@mixin checkboxSize {
-  width: 16px;
-  height: 16px;
 }
 
 $basis: #ffffff;
@@ -45,13 +46,10 @@ $basis: #ffffff;
     flex-direction: column;
     align-items: center;
     padding-top: 50px;
-    padding-bottom: 50px;
-
     .stepBox {
       display: flex;
       justify-content: space-between;
       width: 650px;
-
       .step {
         line-height: 50px;
         font-size: 20px;
@@ -61,60 +59,193 @@ $basis: #ffffff;
         width: 20px;
       }
     }
-  }
-  .completeWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .completeBox {
+    .infoTop {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+      margin-top: 30px;
+      padding: 10px 0px;
       width: 650px;
-      height: 300px;
-      border-top: 1px solid #000;
-      border-bottom: 1px solid #999;
-
+      border-bottom: 1px solid black;
       span {
-        font-size: 20px;
-      }
-      button {
-        margin-top: 30px;
-        width: 380px;
-        height: 60px;
-        font-size: 20px;
-        font-weight: 300;
-        color: $basis;
-        background-color: #000;
+        font-size: 13px;
+        color: #666;
       }
     }
-    .eventBox {
+    .nameBox {
+      @include between;
+      margin-top: 50px;
+      @include boxSize;
+      background-color: $basis;
+      .name.Input {
+        margin-left: 30px;
+        @include inputSize;
+        border: 1px solid #ccc;
+      }
+    }
+    .idBox {
+      margin-top: 10px;
+      @include between;
+      @include boxSize;
+      background-color: $basis;
+      .inputBox {
+        display: flex;
+        justify-content: space-between;
+        @include inputSize;
+        .id.Input {
+          width: 340px;
+          height: 40px;
+          border: 1px solid #ccc;
+        }
+        .id.btn {
+          margin-left: 10px;
+          width: 138px;
+          height: 40px;
+          font-size: 16px;
+          background-color: $basis;
+          border: 1px solid #000;
+          border-radius: 3px;
+        }
+      }
+    }
+    .pwBox {
+      margin-top: 10px;
+      @include between;
+      @include boxSize;
+      background-color: $basis;
+      .pw.Input {
+        margin-left: 30px;
+        @include inputSize;
+        border: 1px solid #ccc;
+      }
+    }
+    .pwGuide {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      width: 650px;
-      height: 300px;
+      margin: 10px 0px 0px 160px;
+      width: 490px;
 
-      span {
-        font-size: 20px;
+      color: #999;
+      font-size: 13px;
+      font-weight: 300;
+      span:nth-child(3) {
+        margin-top: 2px;
       }
-      .couponWrapper {
+    }
+    .emailBox {
+      margin-top: 10px;
+      @include between;
+      @include boxSize;
+      background-color: $basis;
+      .inputBox {
+        display: flex;
+        justify-content: space-between;
+        @include inputSize;
+        .email.Input {
+          width: 340px;
+          height: 40px;
+          border: 1px solid #ccc;
+        }
+        .email.btn {
+          margin-left: 10px;
+          width: 138px;
+          height: 40px;
+          font-size: 16px;
+          background-color: $basis;
+          border: 1px solid #000;
+          border-radius: 3px;
+        }
+      }
+    }
+    .PhoneBox {
+      margin: 10px 0px 20px;
+      @include between;
+      @include boxSize;
+      background-color: $basis;
+      .PhoneNum.Input {
+        margin-left: 30px;
+        @include inputSize;
+        border: 1px solid #ccc;
+      }
+    }
+    .nonEssential {
+      background-color: $basis;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      .birthdateBox {
+        margin-top: 20px;
+        @include between;
+        @include boxSize;
+        background-color: $basis;
+        .birthdate.Input {
+          margin-left: 30px;
+          @include inputSize;
+          border: 1px solid #ccc;
+        }
+      }
+      .agreeBox {
+        margin-top: 30px;
         display: flex;
         justify-content: space-between;
         width: 650px;
-
-        .couponBox {
+        .checkbox.wrapper {
           display: flex;
           flex-direction: column;
+          width: 490px;
+          .checkboxBox {
+            margin-bottom: 5px;
+            font-size: 14px;
+            .Input {
+              margin-right: 5px;
+            }
+          }
+          p {
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #999;
+          }
+        }
+      }
+    }
+    .gotoWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin: 15px 0px;
+      height: 100px;
 
-          img {
-            width: 120px;
-          }
-          label {
-            margin-left: 15px;
-          }
+      .checkAge {
+        font-size: 14px;
+        input {
+          margin-right: 5px;
+        }
+      }
+      p {
+        font-size: 13px;
+        font-weight: 300;
+        color: #999;
+      }
+      .buttonBox {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        width: 225px;
+        .goto {
+          width: 110px;
+          height: 40px;
+          line-height: 38px;
+          font-size: 16px;
+          border-radius: 3px;
+        }
+        .step1 {
+          background-color: $basis;
+          border: 1px solid #999;
+          color: #666;
+        }
+        .step3 {
+          background-color: #000;
+          border: 1px solid #000;
+          color: $basis;
         }
       }
     }
