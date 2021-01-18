@@ -8,7 +8,7 @@ export default class Contents extends Component {
       <div>
         {contents.map((contents) => {
           return (
-            <Link to="#">
+            <Link to="#" key="contents">
               <span>{contents}</span>
             </Link>
           );

@@ -30,7 +30,7 @@ export default class Navinfo extends Component {
 
   render() {
     return (
-      <div>
+      <div className="navInfo">
         <div className="navWrapper">
           <Link to="#" className="allmenuBtn">
             <span className="menu-trigger">
@@ -43,16 +43,16 @@ export default class Navinfo extends Component {
             </Link>
           </h1>
           <ul>
-            {CATEGORY_ARR.map((el, idx) => {
+            {CATEGORY_LIST.map((title, idx) => {
               return (
                 <span
-                  key={el}
+                  key={title}
                   onMouseOver={() => this.overHandler(idx + 1)}
                   onMouseOut={() => this.overHandler()}
                   className="menuItem"
                 >
-                  <small>{el.small}</small>
-                  {el.category}
+                  <small>{title.small}</small>
+                  {title.category}
                 </span>
               );
             })}
@@ -75,7 +75,7 @@ const MAPPING_OBJ = {
   6: <Event />,
 };
 
-const CATEGORY_ARR = [
+const CATEGORY_LIST = [
   { small: "문구", category: "Stationery" },
   { small: "모나미펫", category: "MonamiPet" },
   { small: "리빙&라이프", category: "Living&Life" },

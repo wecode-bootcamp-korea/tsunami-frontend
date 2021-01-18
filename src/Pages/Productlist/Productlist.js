@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Nav from "../../Components/Nav/Nav";
-import "./Productlist.scss";
 import Productinfo from "./Productinfo";
 import { Link } from "react-router-dom";
-// import { PRODUCTLIST } from "../../config";
+import "./Productlist.scss";
+import { PRODUCTLIST } from "../../config";
 
 export default class Productlist extends Component {
   constructor() {
@@ -12,7 +12,8 @@ export default class Productlist extends Component {
       productInfo: [],
     };
   }
-
+  // "http://192.168.202.128:3000/data/productlist.json"
+  // `${PRODUCTLIST}?category=1`
   componentDidMount = () => {
     fetch("http://192.168.202.128:3000/data/productlist.json")
       .then((res) => res.json())
@@ -26,14 +27,11 @@ export default class Productlist extends Component {
   render() {
     const { productInfo } = this.state;
     return (
-      <div>
+      <div className="productList">
         <Nav />
         <main>
           <div className="inner">
             <div className="categroyArea">
-              <Link href="">
-                <h2 className="">test</h2>
-              </Link>
               <ul className="bottomLine">
                 <li className="title active">
                   <Link href="#">Stationery</Link>
@@ -151,14 +149,15 @@ export default class Productlist extends Component {
             </div>
             <div className="categorySort">
               <div className="innerSort">
-                <h3>문구</h3>
+                <h3>프리미엄 펜</h3>
                 <span>
                   등록상품 :<b> {productInfo.length} </b>개
                 </span>
-                <div className="sortArea"></div>
               </div>
             </div>
-            <Productinfo productInfo={productInfo} />
+            <div className="sortArea">
+              <Productinfo productInfo={productInfo} />
+            </div>
           </div>
         </main>
       </div>

@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // 컴포넌트
 import Productlist from "./Pages/Productlist/Productlist";
-import Signin from "./Pages/Signin/Signin";
-import Signup from "./Pages/Signup/Signup";
+import Signin from "./Pages/Sign/Signin";
+import Signup from "./Pages/Sign/Signup";
 import Stationery from "./Pages/Stationery/Stationery";
 import Productdetail from "./Pages/Productdetail/Productdetail";
 

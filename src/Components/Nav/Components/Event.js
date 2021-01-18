@@ -6,22 +6,24 @@ import Contents from "./Contents/Contents";
 export default class Event extends Component {
   render() {
     return (
-      <ul className="subnavBox">
-        {Eventdata.map((menu) => {
-          return (
-            <li className="submenuBox">
-              <Link to="#" className="mainItem">
-                <span>{menu.title}</span>
-              </Link>
-              <ul>
-                <li>
-                  <Contents contents={menu.content} />
-                </li>
-              </ul>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="event">
+        <ul className="subnavBox">
+          {Eventdata.map((menu) => {
+            return (
+              <li className="submenuBox">
+                <Link to="#" className="mainItem">
+                  <span>{menu.title}</span>
+                </Link>
+                <ul>
+                  <li>
+                    <Contents contents={menu.content} />
+                  </li>
+                </ul>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     );
   }
 }

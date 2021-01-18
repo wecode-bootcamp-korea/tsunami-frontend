@@ -5,7 +5,7 @@ import "./Nav.scss";
 export default class Nav extends Component {
   render() {
     return (
-      <div>
+      <div className="Nav">
         <header>
           <nav>
             <Navinfo />

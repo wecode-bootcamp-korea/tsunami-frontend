@@ -1,37 +1,109 @@
-main {
-  width: 100%;
-  height: 100%;
-  margin-top: 20px;
+.productList {
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: 100%;
 
-  .title {
-    text-align: center;
-    padding-bottom: 20px;
-  }
-  .title > a {
-    font-size: 35px;
-  }
-  .bottomLine {
-    border-bottom: solid 1px black;
-  }
-  .contentList {
+  main {
+    // background-color: orange;
+    margin-top: 20px;
     display: flex;
-    .contentBox {
+    justify-content: center;
+    .inner {
+      width: 80%;
+    }
+    .innerSort {
+      // background-color: palegreen;
+      padding-left: 10px;
+      padding-bottom: 20px;
       display: flex;
-      flex-direction: column;
-      width: 250px;
-      padding-top: 2%;
-      padding-left: 50px;
-      li a {
-        font-size: 13px;
+      h3 {
+        font-size: 25px;
+        padding-right: 10px;
+      }
+      span {
+        padding-top: 10px;
       }
     }
-    .listTop {
-      font-weight: bold;
-      margin-bottom: 12px;
-      font-size: 15px;
+    .title {
+      // background-color: pink;
+      margin-top: 100px;
+      padding-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      a {
+        text-decoration: none;
+        font-size: 45px;
+      }
+    }
+    .bottomLine {
+      border-bottom: solid 1px black;
+    }
+    .contentList {
+      display: flex;
+      .contentBox {
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 2%;
+        width: 250px;
+        padding-left: 50px;
+        li a {
+          font-size: 13px;
+        }
+      }
+      .listTop {
+        font-weight: bold;
+        margin-bottom: 12px;
+        font-size: 15px;
+        text-decoration: none;
+      }
+    }
+    .productInfo {
+      display: flex;
+      flex-wrap: wrap;
+      // align-content: space-around;
+      justify-content: space-around;
+      .productItems {
+        display: flex;
+        ul {
+          li {
+            .itemList {
+              .thumbImg {
+                img {
+                  width: 285px;
+                  height: 285px;
+                }
+              }
+              a {
+                display: flex;
+                flex-direction: column;
+                text-decoration: none;
+                span {
+                  padding: 5px 0;
+                  &:nth-child(1) {
+                    font-size: 12px;
+                    color: lightgray;
+                  }
+                  &:nth-child(2) {
+                    font-size: 15px;
+                  }
+                  &:nth-child(3) {
+                    font-size: 15px;
+                    font-weight: bold;
+                    color: rgb(255, 81, 0);
+                    padding-bottom: 80px;
+                  }
+                }
+                .info {
+                  display: flex;
+                  flex-direction: column;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
-

@@ -1,98 +1,96 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    header {
+  background-color: white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  header {
+    display: flex;
+    nav {
+      position: fixed;
+      width: 100%;
+      background-color: white;
+      display: flex;
+      .navWrapper {
         display: flex;
-        width: 100%;
-        nav {
-            position: fixed;
-            width: 100%;
-            background-color: white;
-            overflow: hidden;
-            display: flex;
-            .navWrapper{
-                display: flex;
-                width: 1700px;
-            }
-            .allmenuBtn {
-                img {
-                    width: 25px;
-                    margin: 35px 0 0 80px;
-                }
-            }
-            .logo {
-                img {
-                    margin: 35px 40px 0 40px; 
-                    width: 150px;
-                }
-            }
-            .naviconBox {
-                width: 100%;
-                padding-top: 25px;
-                .navIcon {
-                    display: flex;
-                    justify-content: flex-end;
-                    padding-right: 82px;
-                    width: 100%;
-                    img {
-                        width: 25px;
-                        margin: 10px;
-                    }
-                    img:hover {
-                        cursor: pointer;
-                    }
-                }
-            }
-            .subnav {
-                display: flex;
-                .subnavBox {
-                    background-color: rgba(250, 250, 250, 0.5);
-                    margin-left: 280px;
-                    width: 100%;
-                    padding-top: 30px;
-                    display: flex;
-                    justify-content: space-evenly;
-                    padding-bottom: 30px;
-                    .submenuBox {
-                        display: flex;
-                        flex-direction: column;
-                        span {
-                            display: flex;
-                            flex-direction: column;
-                        }
-                    }
-                }
-                    .mainItem {
-                        font-weight: bold;
-                    }
-            }
-            ul {
-                display: flex;
-                .menuItem {
-                    display: flex;
-                    flex-direction: column;
-                    font-weight: bold;
-                    font-size: 18px;
-                    margin: 30px 20px 0 20px;
-                    padding-bottom: 30px;
-                    &:hover {
-                        color: red;
-                        cursor: pointer;
-                        border-bottom: solid 3px red;
-                        small {
-                            opacity: 1;
-                        }
-                    }
-                    small {
-                        opacity: 0;
-                        display: flex;
-                        justify-content: flex-end;
-                        font-weight: normal;
-                        font-size: small;
-                    }
-                }
-                
-            }
+        width: 1300px;
+      }
+      .allmenuBtn {
+        img {
+          width: 25px;
+          margin: 35px 0 0 80px;
         }
+      }
+      .logo {
+        img {
+          margin: 35px 40px 0 40px;
+          width: 150px;
+        }
+      }
+      .naviconBox {
+        width: 100%;
+        padding-top: 25px;
+        .navIcon {
+          display: flex;
+          justify-content: flex-end;
+          padding-right: 82px;
+          width: 100%;
+          img {
+            width: 25px;
+            margin: 10px;
+          }
+          img:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      .subnav {
+        display: flex;
+        justify-content: center;
+        .subnavBox {
+          background-color: rgba(250, 250, 250, 0.5);
+          padding-top: 30px;
+          display: flex;
+          justify-content: space-evenly;
+          padding-bottom: 30px;
+          .submenuBox {
+            display: flex;
+            flex-direction: column;
+            span {
+              display: flex;
+              flex-direction: column;
+            }
+          }
+        }
+        .mainItem {
+          font-weight: bold;
+        }
+      }
+      ul {
+        display: flex;
+        .menuItem {
+          display: flex;
+          flex-direction: column;
+          font-weight: bold;
+          font-size: 18px;
+          margin: 30px 20px 0 20px;
+          padding-bottom: 30px;
+          &:hover {
+            color: red;
+            cursor: pointer;
+            border-bottom: solid 3px red;
+            small {
+              opacity: 1;
+            }
+          }
+          small {
+            opacity: 0;
+            display: flex;
+            justify-content: flex-end;
+            font-weight: normal;
+            font-size: small;
+          }
+        }
+      }
     }
+  }
 }

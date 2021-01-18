@@ -5,15 +5,15 @@ export default class Productinfo extends Component {
   render() {
     const { productInfo } = this.props;
     return (
-      <div className="productList">
-        {productInfo.map((el) => {
+      <div className="productInfo">
+        {productInfo.map((product) => {
           return (
             <ProductItems
-              id={el.id}
-              image_url={el.image_url}
-              name={el.name}
-              price={el.price}
-              maker={el.maker}
+              id={product.id}
+              image_url={product.image_url}
+              name={product.name}
+              price={product.price}
+              maker={product.maker}
             />
           );
         })}
