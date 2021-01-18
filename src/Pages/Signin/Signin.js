@@ -21,19 +21,20 @@ class Signin extends Component {
   };
 
   render() {
+    const { isMember } = this.state;
     return (
-      <div className="signin">
+      <div className="Signin">
         <Header />
         <div className="memberWrapper">
           <div className="memberBox">
             <div
-              className={`member ${this.state.isMember && "active"}`}
+              className={`member ${isMember && "active"}`}
               onClick={() => this.handleMember(true)}
             >
               회원
             </div>
             <div
-              className={`member ${!this.state.isMember && "active"}`}
+              className={`member ${!isMember && "active"}`}
               onClick={() => this.handleMember(false)}
             >
               비회원 (주문조회)

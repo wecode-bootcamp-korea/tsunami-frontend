@@ -6,7 +6,7 @@ import "./Signup4.scss";
 class Signup4 extends Component {
   render() {
     return (
-      <div className="signup">
+      <div className="Signup4">
         <header>회원가입</header>
         <div className="stepWrapper">
           <div className="stepBox">

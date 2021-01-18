@@ -16,7 +16,7 @@ class Signup2 extends Component {
       is_mall_agreed: false,
       is_tte_agreed: false,
       is_personaldata_agreed: false,
-      is_toggle1: false,
+      is_toggle1: true,
       is_toggle2: false,
       is_toggle3: false,
     };
@@ -73,7 +73,7 @@ class Signup2 extends Component {
 
   render() {
     return (
-      <div className="signup">
+      <div className="Signup2">
         <header>회원가입</header>
         <div className="stepWrapper">
           <div className="stepBox">

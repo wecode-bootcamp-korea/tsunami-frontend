@@ -28,7 +28,17 @@
 
 $basis: #ffffff;
 
-.signup {
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.Signup3 {
+  animation: fadein 2s;
   position: relative;
   top: 100px;
   font-size: 16px;
@@ -54,6 +64,9 @@ $basis: #ffffff;
         line-height: 50px;
         font-size: 20px;
         text-align: center;
+        &.info {
+          font-weight: 800;
+        }
       }
       img {
         width: 20px;

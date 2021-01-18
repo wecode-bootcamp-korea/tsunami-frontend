@@ -22,7 +22,7 @@ class Find extends Component {
 
   render() {
     return (
-      <div className="find">
+      <div className="Find">
         <Header />
         <div className="FindWrapper">
           <div className="findBox">

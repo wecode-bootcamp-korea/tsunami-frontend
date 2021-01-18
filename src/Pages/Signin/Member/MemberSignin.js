@@ -36,28 +36,6 @@ class MemberSignin extends Component {
     if (checkedIdBlank || checkedPwBlank) {
       return;
     }
-    //   if (this.state.id.length === 0) {
-    //     this.setState({
-    //       checkedIdBlank: true,
-    //       checkedPwBlank: false,
-    //     });
-
-    //     return;
-    //   } else {
-    //     this.setState({
-    //       checkedIdBlank: false,
-    //     });
-    //   }
-    //   if (this.state.pw.length === 0) {
-    //     this.setState({
-    //       checkedPwBlank: true,
-    //     });
-    //   } else {
-    //     this.setState({
-    //       checkedPwBlank: false,
-    //     });
-    //   }
-    // };
     fetch(SIGNIN_API, {
       method: "POST",
       body: JSON.stringify({

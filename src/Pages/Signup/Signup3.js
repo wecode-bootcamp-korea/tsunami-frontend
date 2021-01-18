@@ -81,7 +81,7 @@ class Signup3 extends Component {
     })
       .then((response) => response.json())
       .then((result) => {
-        if (result.msg === "created") {
+        if (result.MESSAGE === "USER_CREATED") {
           alert("회원가입이 완료 되었습니다!");
           this.props.history.push("/signup4");
         }
@@ -161,7 +161,7 @@ class Signup3 extends Component {
 
   render() {
     return (
-      <div className="signup">
+      <div className="Signup3">
         <header>회원가입</header>
         <div className="stepWrapper">
           <div className="stepBox">

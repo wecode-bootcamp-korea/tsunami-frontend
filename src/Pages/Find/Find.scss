@@ -1,34 +1,6 @@
-@mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@mixin around {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-@mixin inputSize {
-  width: 490px;
-  height: 40px;
-}
-
-@mixin boxSize {
-  width: 650px;
-  height: 40px;
-}
-
 $basis: #ffffff;
 
-.find {
+.Find {
   position: relative;
   top: 100px;
   height: 1000px;

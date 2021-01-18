@@ -53,7 +53,7 @@ class FindPW extends Component {
         const PASSWORD = window.localStorage.getItem("PASSWORD");
         if (PASSWORD !== "undefined") {
           alert(`당신의 임시비밀번호는${PASSWORD}입니다!`);
-          this.props.history.push("/main");
+          this.props.history.push("/");
           return;
         } else {
           alert("잘못된정보입니다! 기억하세요!");

@@ -4,31 +4,9 @@
   align-items: center;
 }
 
-@mixin between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@mixin around {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-@mixin inputSize {
-  width: 490px;
-  height: 40px;
-}
-
-@mixin boxSize {
-  width: 650px;
-  height: 40px;
-}
-
 $basis: #ffffff;
 
-.snsWrapper {
+.SnsLogin {
   @include center;
   display: flex;
   flex-direction: column;

@@ -5,7 +5,7 @@ import "./SnsLogin.scss";
 class SnsLogin extends Component {
   render() {
     return (
-      <div className="snsWrapper">
+      <div className="SnsLogin">
         <div className="snsLogin">SNS 로그인</div>
         <div className="snsImagesWrapper">
           <div className="Box naver">

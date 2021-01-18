@@ -30,7 +30,7 @@ class FindID extends Component {
       checkedEmailBlank,
     });
     if (checkedNameBlank || checkedEmailBlank) {
-      return;
+      return alert("공백값이 있습니다!");
     }
 
     fetch(FINDID_API, {
@@ -42,14 +42,11 @@ class FindID extends Component {
     })
       .then((response) => response.json())
       .then((result) => {
-        window.localStorage.setItem(
-          "USERNAME",
-          JSON.stringify(result.USERNAME)
-        );
-        const USERNAME = window.localStorage.getItem("USERNAME");
-        if (USERNAME !== "undefined") {
+        const USERNAME = result.USERNAME;
+
+        if (USERNAME !== undefined) {
           alert(`당신의 아이디는${USERNAME}입니다`);
-          this.props.history.push("/main");
+          this.props.history.push("/");
           return;
         } else {
           alert("아이디가 엄서영! 회원가입부터 하시져!");
@@ -59,7 +56,7 @@ class FindID extends Component {
 
   render() {
     return (
-      <div className="findId">
+      <div className="FindID">
         <div className="findWrapper">
           <div className="name signBox">
             <span className="name">이름</span>
