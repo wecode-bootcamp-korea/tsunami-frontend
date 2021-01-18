@@ -1,10 +1,14 @@
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  span {
+.Main {
+  position: relative;
+  top: 100px;
+  .event {
+    height: 620px;
     font-size: 50px;
     background-color: #a7a9cf;
+    span {
+      position: absolute;
+      top: 200px;
+      left: 40px;
+    }
   }
 }
