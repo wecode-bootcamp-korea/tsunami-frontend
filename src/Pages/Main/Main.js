@@ -20,10 +20,9 @@ class Main extends Component {
             </div>
           </div>
           <div className="middle">
-            <h4>나만의 감성을 DLY</h4>
+            <h3>나만의 감성을 DLY</h3>
             <span>다양한 곳에 마카를 이용해 DIY해보세요.</span>
             <span>내 감성을 고스란히 담은 소품을 만들 수 있을 거예요.</span>
-            <span></span>
           </div>
         </div>
       </div>
