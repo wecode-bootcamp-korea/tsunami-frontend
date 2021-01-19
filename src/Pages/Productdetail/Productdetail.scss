@@ -1,0 +1,29 @@
+body {
+  width: 80%;
+  margin: 0 auto;
+  .Productdetail {
+    margin-top: 100px;
+    background-color: yellowgreen;
+    align-items: flex-start;
+    .inner {
+      align-items: flex-start;
+      background-color: wheat;
+      .moveBox {
+        background-color: yellow;
+        display: flex;
+        font-size: small;
+        justify-content: flex-end;
+        li:nth-child()
+        // li::before {
+        //   &:nth-child(1) {
+        //     content: "";
+        //   }
+        //   content: " > ";
+        // }
+        Link {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

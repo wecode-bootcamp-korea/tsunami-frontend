@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./Productdetail";
+import "./Productdetail.scss";
 
 export default class Productdetail extends Component {
   render() {
     return (
-      <div className="productDetail">
+      <div className="Productdetail">
         <form className="productDetailForm">
           <main id="contents" className="goods detail">
             <div className="inner location">
-              <ul>
+              <ul className="moveBox">
                 <li>
                   <Link to="#">Home</Link>
                 </li>
@@ -39,9 +39,10 @@ export default class Productdetail extends Component {
                 </li>
               </ul>
             </div>
+            <div className="inner product"></div>
+            <div className="inner pdetail"></div>
+            <div className="bottombuybtn"></div>
           </main>
-          <div></div>
-          <div></div>
         </form>
       </div>
     );

@@ -17,7 +17,7 @@ export default class Routes extends Component {
           {/* <Route exact path="/signin" component={Signin} /> */}
           {/* <Route exact path="/signup" component={Signup} /> */}
           {/* <Route exact path="/stationery" component={Stationery} /> */}
-          <Route exact path="/" component={Productdetail} />
+          <Route exact path="/productdetail" component={Productdetail} />
         </Switch>
       </Router>
     );
