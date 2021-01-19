@@ -4,24 +4,41 @@ import Productinfo from "./Productinfo";
 import { Link } from "react-router-dom";
 import "./Productlist.scss";
 import { PRODUCTLIST } from "../../config";
+import { withRouter } from "react-router-dom";
 
-export default class Productlist extends Component {
+class Productlist extends Component {
   constructor() {
     super();
     this.state = {
+      productDetail: [],
       productInfo: [],
+      currentId: 0,
     };
   }
   // "http://192.168.202.128:3000/data/productlist.json"
   // `${PRODUCTLIST}?category=1`
   componentDidMount = () => {
-    fetch("http://192.168.202.128:3000/data/productlist.json")
+    fetch(`${PRODUCTLIST}`)
       .then((res) => res.json())
       .then((res) => {
         this.setState({
           productInfo: res.product,
         });
       });
+  };
+
+  getId = (id) => {
+    fetch(`${PRODUCTLIST}${id}`)
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({ productDetail: res.product });
+        console.log(this.state.productDetail);
+      });
+    this.props.history.push("/productdetail");
+  };
+
+  componentDidUpdate = () => {
+    // this.props.history.push("")
   };
 
   render() {
@@ -156,7 +173,11 @@ export default class Productlist extends Component {
               </div>
             </div>
             <div className="sortArea">
-              <Productinfo productInfo={productInfo} />
+              <Productinfo
+                productInfo={productInfo}
+                getId={this.getId}
+                // onClick={this.componentDidUpdate}
+              />
             </div>
           </div>
         </main>
@@ -164,3 +185,5 @@ export default class Productlist extends Component {
     );
   }
 }
+
+export default withRouter(Productlist);
