@@ -30,7 +30,7 @@ class FindID extends Component {
       checkedEmailBlank,
     });
     if (checkedNameBlank || checkedEmailBlank) {
-      return alert("공백값이 있습니다!");
+      return;
     }
 
     fetch(FINDID_API, {
@@ -44,7 +44,7 @@ class FindID extends Component {
       .then((result) => {
         const USERNAME = result.USERNAME;
 
-        if (USERNAME !== undefined) {
+        if (USERNAME) {
           alert(`당신의 아이디는${USERNAME}입니다`);
           this.props.history.push("/");
           return;

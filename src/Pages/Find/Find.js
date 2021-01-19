@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import Header from "./Header/Header";
 import FindId from "./FindId/FindID";
 import FindPw from "./FindPw/FindPW";
 
@@ -21,19 +20,20 @@ class Find extends Component {
   };
 
   render() {
+    const { isFindId } = this.state;
     return (
       <div className="Find">
-        <Header />
+        <p className="header">아이디/비밀번호 찾기</p>
         <div className="FindWrapper">
           <div className="findBox">
             <div
-              className={`isFind ${this.state.isFindId && "active"}`}
+              className={`isFind ${isFindId && "active"}`}
               onClick={() => this.handleFind(true)}
             >
               아이디 찾기
             </div>
             <div
-              className={`isFind ${!this.state.isFindId && "active"}`}
+              className={`isFind ${!isFindId && "active"}`}
               onClick={() => this.handleFind(false)}
             >
               비밀번호 찾기

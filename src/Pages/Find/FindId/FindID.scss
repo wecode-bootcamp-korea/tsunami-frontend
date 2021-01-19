@@ -1,22 +1,15 @@
-$basis: #ffffff;
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+@import "../../../Styles/common.scss";
 
 .FindID {
   animation: fadein 2s;
   font-size: 16px;
   background-color: $basis;
+
   .findWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .signBox {
       display: flex;
       justify-content: space-between;
@@ -31,15 +24,18 @@ $basis: #ffffff;
         border: 1px solid #ccc;
       }
     }
+
     .name.signBox {
       margin-top: 50px;
     }
+
     .info.active {
       display: flex;
       margin-right: 60px;
       font-size: 14px;
       color: red;
     }
+
     .findIdBtn {
       margin-top: 25px;
       width: 405px;
@@ -50,6 +46,7 @@ $basis: #ffffff;
       border: none;
       border-radius: 3px;
     }
+
     .info.box {
       display: flex;
       flex-direction: column;
@@ -58,6 +55,7 @@ $basis: #ffffff;
       font-size: 13px;
       font-weight: 300;
       color: #999;
+
       span:last-child {
         margin-top: 2px;
       }

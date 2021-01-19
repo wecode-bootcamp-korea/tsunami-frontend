@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
-import { SIGNUP_API } from "../../config";
-import { DUPLICATION_USERNAME_API } from "../../config";
-import { DUPLICATION_EMAIL_API } from "../../config";
+import { SIGNUP_API } from "../../../config";
+import { DUPLICATION_USERNAME_API } from "../../../config";
+import { DUPLICATION_EMAIL_API } from "../../../config";
 
-import "./Signup3.scss";
+import "./SinupInfo.scss";
 
-class Signup3 extends Component {
+class SinupInfo extends Component {
   constructor() {
     super();
     this.state = {
@@ -50,6 +50,9 @@ class Signup3 extends Component {
       phone_number,
       is_valid_username,
       is_valid_email,
+      birthday,
+      is_sms_agreed,
+      is_email_agreed,
     } = this.state;
     if (
       name.length <= 0 ||
@@ -69,21 +72,21 @@ class Signup3 extends Component {
     fetch(SIGNUP_API, {
       method: "POST",
       body: JSON.stringify({
-        name: this.state.name,
-        username: this.state.username,
-        password: this.state.password,
-        email: this.state.email,
-        phone_number: this.state.phone_number,
-        birthday: this.state.birthday,
-        is_sms_agreed: this.state.is_sms_agreed,
-        is_email_agreed: this.state.is_email_agreed,
+        name,
+        username,
+        password,
+        email,
+        phone_number,
+        birthday,
+        is_sms_agreed,
+        is_email_agreed,
       }),
     })
       .then((response) => response.json())
       .then((result) => {
         if (result.MESSAGE === "USER_CREATED") {
           alert("회원가입이 완료 되었습니다!");
-          this.props.history.push("/signup4");
+          this.props.setStep(3);
         }
       });
   };
@@ -116,9 +119,9 @@ class Signup3 extends Component {
   };
 
   handleDuplicateEmail = () => {
-    const emailFilter = /@/;
+    const emailFilter = /@/g;
     const email = this.state.email;
-    if (!emailFilter) {
+    if (!emailFilter.test(email)) {
       alert("이메일형식으로 작성해주세요!");
     }
     fetch(`${DUPLICATION_EMAIL_API}${email}`, {
@@ -161,16 +164,8 @@ class Signup3 extends Component {
 
   render() {
     return (
-      <div className="Signup3">
-        <header>회원가입</header>
+      <div className="SinupInfo">
         <div className="stepWrapper">
-          <div className="stepBox">
-            <div className="step agree">STEP1.약관동의</div>
-            <img src="/images/right-solid.svg" alt="화살표" />
-            <div className="step info">STEP2.회원정보 입력</div>
-            <img src="/images/right-solid.svg" alt="화살표" />
-            <div className="step complete">STEP3.가입완료</div>
-          </div>
           <div className="infoTop">
             <h3>회원기본정보</h3>
             <span>* 표시는 반드시 입력하셔야 하는 항목입니다.</span>
@@ -320,7 +315,7 @@ class Signup3 extends Component {
               회원정보수정에서 등록할 수 있습니다.
             </p>
             <div className="buttonBox">
-              <Link to="/signup2">
+              <Link to="/step">
                 <button type="submit" className="goto step1">
                   취소
                 </button>
@@ -340,4 +335,4 @@ class Signup3 extends Component {
   }
 }
 
-export default withRouter(Signup3);
+export default withRouter(SinupInfo);

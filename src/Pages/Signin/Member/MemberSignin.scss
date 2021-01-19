@@ -1,23 +1,12 @@
-@mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@import "../../../Styles/common.scss";
 
-$basis: #ffffff;
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .MemberSignin {
   animation: fadein 2s;
   height: 700px;
+
   .sign.Wrapper {
     position: relative;
+
     .signBox {
       display: flex;
       justify-content: space-between;
@@ -33,6 +22,7 @@ $basis: #ffffff;
         border: 1px solid #ccc;
       }
     }
+
     .id.signBox {
       margin-top: 50px;
     }
@@ -55,6 +45,7 @@ $basis: #ffffff;
       border-radius: 3px;
     }
   }
+
   .signHelperBox {
     display: flex;
     justify-content: space-around;
@@ -62,11 +53,13 @@ $basis: #ffffff;
     width: 405px;
     font-size: 14px;
     color: #555;
+
     p {
       width: 33%;
       text-align: center;
       border-right: #cccccc 1px solid;
     }
+
     .gotoSignup {
       border: none;
     }

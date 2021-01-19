@@ -1,8 +1,4 @@
-@mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@import "../../../Styles/common.scss";
 
 $basis: #ffffff;
 
@@ -14,14 +10,17 @@ $basis: #ffffff;
   text-align: center;
   font-weight: 700;
   border-top: #ececec 1px solid;
+
   .snsLogin {
     font-size: 20px;
     margin: 20px;
   }
+
   .snsImagesWrapper {
     display: flex;
     justify-content: space-between;
     width: 405px;
+
     .Box {
       .Logo {
         width: 55px;

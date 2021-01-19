@@ -102,7 +102,7 @@ class MemberSignin extends Component {
             <Link to="/find">비밀번호 찾기</Link>
           </p>
           <p className="gotoSignup">
-            <Link to="/signup1">화원가입</Link>
+            <Link to="/signup">화원가입</Link>
           </p>
         </div>
         <SnsLogin />

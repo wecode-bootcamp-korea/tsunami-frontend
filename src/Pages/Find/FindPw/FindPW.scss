@@ -1,22 +1,15 @@
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-$basis: #ffffff;
+@import "../../../Styles/common.scss";
 
 .FindPW {
   animation: fadein 2s;
   font-size: 16px;
   background-color: $basis;
+
   .findPwWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .signBox {
       display: flex;
       justify-content: space-between;
@@ -36,6 +29,7 @@ $basis: #ffffff;
     .id.signBox {
       margin-top: 50px;
     }
+
     .findBtn {
       margin-top: 25px;
       width: 405px;
@@ -46,6 +40,7 @@ $basis: #ffffff;
       border: none;
       border-radius: 3px;
     }
+
     .info.box {
       display: flex;
       flex-direction: column;
@@ -54,6 +49,7 @@ $basis: #ffffff;
       font-size: 13px;
       font-weight: 300;
       color: #999;
+
       span:nth-child(2) {
         margin: 2px 0px;
       }

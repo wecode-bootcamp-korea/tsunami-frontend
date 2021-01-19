@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import Header from "./Header/Header";
 import MemberSignin from "./Member/MemberSignin";
 import UnmemberDeliveryTracking from "./Member/UnmemberDeliveryTracking";
 
@@ -24,7 +23,7 @@ class Signin extends Component {
     const { isMember } = this.state;
     return (
       <div className="Signin">
-        <Header />
+        <p className="header">로그인</p>
         <div className="memberWrapper">
           <div className="memberBox">
             <div

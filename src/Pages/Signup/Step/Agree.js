@@ -2,13 +2,12 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
-import Useagreement from "./Useagreement/Useagreement";
-import Useagreement2 from "./Useagreement/Useagreement2";
+import Useagreement from "../Useagreement/Useagreement";
+import Useagreement2 from "../Useagreement/Useagreement2";
+import Useagreement3 from "../Useagreement/Useagreement3";
+import "./Agree.scss";
 
-import "./Signup2.scss";
-import Useagreement3 from "./Useagreement/Useagreement3";
-
-class Signup2 extends Component {
+class Agree extends Component {
   constructor() {
     super();
     this.state = {
@@ -34,8 +33,24 @@ class Signup2 extends Component {
 
   handleAgreeCheckbox = (e) => {
     const { name, checked } = e.target;
+
+    this.setState(
+      {
+        [name]: checked,
+      },
+      this.changeBoxBool
+    );
+  };
+
+  changeBoxBool = () => {
+    const {
+      is_mall_agreed,
+      is_tte_agreed,
+      is_personaldata_agreed,
+    } = this.state;
+
     this.setState({
-      [name]: checked,
+      is_all_agreed: is_mall_agreed && is_tte_agreed && is_personaldata_agreed,
     });
   };
 
@@ -64,7 +79,7 @@ class Signup2 extends Component {
       is_personaldata_agreed,
     } = this.state;
     if (is_mall_agreed && is_tte_agreed && is_personaldata_agreed) {
-      this.props.history.push("/signup3");
+      this.props.setStep(2);
     } else {
       alert("이용약관에 모두 동의해주세요!");
       return;
@@ -73,16 +88,8 @@ class Signup2 extends Component {
 
   render() {
     return (
-      <div className="Signup2">
-        <header>회원가입</header>
+      <div className="Agree">
         <div className="stepWrapper">
-          <div className="stepBox">
-            <div className="step agree">STEP1.약관동의</div>
-            <img src="/images/right-solid.svg" alt="화살표" />
-            <div className="step info">STEP2.회원정보 입력</div>
-            <img src="/images/right-solid.svg" alt="화살표" />
-            <div className="step complete">STEP3.가입완료</div>
-          </div>
           <div className="allAgreeBox">
             <input
               className="agreeCheckbox"
@@ -135,7 +142,7 @@ class Signup2 extends Component {
             {this.state.is_toggle3 && <Useagreement3 />}
           </div>
           <div className="buttonBox">
-            <Link to="/signup1">
+            <Link to="/signup">
               <button type="submit" className="goto step1">
                 취소
               </button>
@@ -154,4 +161,4 @@ class Signup2 extends Component {
   }
 }
 
-export default withRouter(Signup2);
+export default withRouter(Agree);

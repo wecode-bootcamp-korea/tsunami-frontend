@@ -1,47 +1,12 @@
-@mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@import "../../Styles/common.scss";
 
-@mixin between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@mixin inputSize {
-  width: 490px;
-  height: 40px;
-}
-
-@mixin boxSize {
-  width: 650px;
-  height: 40px;
-}
-
-@mixin checkboxSize {
-  width: 16px;
-  height: 16px;
-}
-
-$basis: #ffffff;
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.Signup1 {
+.Signup {
   animation: fadein 2s;
   position: relative;
   top: 100px;
   font-size: 16px;
   background-color: $basis;
+
   header {
     height: 190px;
     text-align: center;
@@ -50,6 +15,7 @@ $basis: #ffffff;
     font-weight: 350;
     background-color: #faf9f7;
   }
+
   .welcomeBox {
     display: flex;
     flex-direction: column;
@@ -65,10 +31,12 @@ $basis: #ffffff;
       }
     }
   }
+
   .welcomeWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .btnBox {
       display: flex;
       align-items: center;
@@ -86,6 +54,7 @@ $basis: #ffffff;
         background-color: #000;
       }
     }
+
     .eventBox {
       display: flex;
       flex-direction: column;
@@ -97,6 +66,7 @@ $basis: #ffffff;
       span {
         font-size: 20px;
       }
+
       .couponWrapper {
         display: flex;
         justify-content: space-between;
@@ -109,6 +79,7 @@ $basis: #ffffff;
           img {
             width: 120px;
           }
+
           label {
             margin-left: 15px;
           }
