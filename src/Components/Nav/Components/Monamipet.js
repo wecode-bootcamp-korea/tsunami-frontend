@@ -6,22 +6,20 @@ import Contents from "./Contents/Contents";
 export default class Monamipet extends Component {
   render() {
     return (
-      <ul className="subnavBox">
-        {Monamipetdata.map((menu) => {
-          return (
-            <li className="submenuBox">
-              <Link to="#" className="mainItem">
-                <span>{menu.title}</span>
-              </Link>
-              <ul>
-                <li>
-                  <Contents contents={menu.content} />
-                </li>
-              </ul>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="Monamipet">
+        <ul className="subnavBox">
+          {Monamipetdata.map((menu) => {
+            return (
+              <li className="submenuBox" key={menu}>
+                <Link to="#" className="mainItem">
+                  <span>{menu.title}</span>
+                </Link>
+                <Contents contents={menu.content} />
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     );
   }
 }
