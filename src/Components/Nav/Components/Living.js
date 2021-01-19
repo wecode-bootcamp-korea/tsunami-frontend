@@ -6,19 +6,15 @@ import Contents from "./Contents/Contents";
 export default class Living extends Component {
   render() {
     return (
-      <div className="living">
+      <div className="Living">
         <ul className="subnavBox">
           {Livingdata.map((menu) => {
             return (
-              <li className="submenuBox">
+              <li className="submenuBox" key={menu}>
                 <Link to="#" className="mainItem">
                   <span>{menu.title}</span>
                 </Link>
-                <ul>
-                  <li>
-                    <Contents contents={menu.content} />
-                  </li>
-                </ul>
+                <Contents contents={menu.content} />
               </li>
             );
           })}

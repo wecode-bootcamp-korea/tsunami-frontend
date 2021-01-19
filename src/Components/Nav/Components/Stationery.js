@@ -6,19 +6,15 @@ import Contents from "./Contents/Contents";
 export default class Stationery extends Component {
   render() {
     return (
-      <div className="stationery">
+      <div className="Stationery">
         <ul className="subnavBox">
           {Stationerydata.map((menu) => {
             return (
-              <li className="submenuBox">
+              <li className="submenuBox" key={menu}>
                 <Link to="#" className="mainItem">
                   <span>{menu.title}</span>
                 </Link>
-                <ul>
-                  <li>
-                    <Contents contents={menu.content} />
-                  </li>
-                </ul>
+                <Contents contents={menu.content} />
               </li>
             );
           })}

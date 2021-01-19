@@ -5,7 +5,7 @@ export default class Productinfo extends Component {
   render() {
     const { productInfo } = this.props;
     return (
-      <div className="productInfo">
+      <div className="Productinfo">
         {productInfo.map((product) => {
           return (
             <ProductItems

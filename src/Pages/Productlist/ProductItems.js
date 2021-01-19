@@ -5,7 +5,7 @@ export default class ProductItems extends Component {
   render() {
     const { image_url, name, price, maker } = this.props;
     return (
-      <div className="productItems">
+      <div className="ProductItems">
         <ul>
           <li>
             <div className="itemList">

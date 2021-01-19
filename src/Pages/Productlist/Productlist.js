@@ -27,7 +27,7 @@ export default class Productlist extends Component {
   render() {
     const { productInfo } = this.state;
     return (
-      <div className="productList">
+      <div className="Productlist">
         <Nav />
         <main>
           <div className="inner">

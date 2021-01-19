@@ -12,25 +12,18 @@ export default class Navinfo extends Component {
     super();
     this.state = {
       currentId: 0,
-      showMenu: false,
     };
   }
 
   overHandler = (id) => {
     this.setState({
       currentId: id,
-      showMenu: true,
-    });
-  };
-  outHandler = (e) => {
-    this.setState({
-      showMenu: false,
     });
   };
 
   render() {
     return (
-      <div className="navInfo">
+      <div className="Navinfo">
         <div className="navWrapper">
           <Link to="#" className="allmenuBtn">
             <span className="menu-trigger">
@@ -47,8 +40,8 @@ export default class Navinfo extends Component {
               return (
                 <span
                   key={title}
-                  onMouseOver={() => this.overHandler(idx + 1)}
-                  onMouseOut={() => this.overHandler()}
+                  onMouseEnter={() => this.overHandler(idx + 1)}
+                  onMouseLeave={() => this.overHandler(0)}
                   className="menuItem"
                 >
                   <small>{title.small}</small>
@@ -57,10 +50,19 @@ export default class Navinfo extends Component {
               );
             })}
           </ul>
+          <span className="navIcon">
+            <img src="/images/shopping-basket.svg" alt="shopping basket" />
+            <img src="/images/user.svg" alt="user icon" />
+            <img src="/images/search.svg" alt="search icon" />
+          </span>
         </div>
-        {this.state.showMenu && (
-          <div className="subnav">{MAPPING_OBJ[this.state.currentId]}</div>
-        )}
+        <div
+          className="subnav"
+          onMouseEnter={() => this.overHandler(this.state.currentId)}
+          onMouseLeave={() => this.overHandler(0)}
+        >
+          {MAPPING_OBJ[this.state.currentId]}
+        </div>
       </div>
     );
   }
@@ -80,6 +82,6 @@ const CATEGORY_LIST = [
   { small: "모나미펫", category: "MonamiPet" },
   { small: "리빙&라이프", category: "Living&Life" },
   { small: "기프트", category: "Gift" },
-  { small: "스토리픽", category: "Story Pick" },
+  { small: "스토리픽", category: "StoryPick" },
   { small: "이벤트", category: "Event" },
 ];

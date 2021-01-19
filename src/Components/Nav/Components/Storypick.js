@@ -6,19 +6,15 @@ import Contents from "./Contents/Contents";
 export default class Storypick extends Component {
   render() {
     return (
-      <div className="storyPick">
+      <div className="Storypick">
         <ul className="subnavBox">
           {Storypickdata.map((menu) => {
             return (
-              <li className="submenuBox">
+              <li className="submenuBox" key={menu}>
                 <Link to="#" className="mainItem">
                   <span>{menu.title}</span>
                 </Link>
-                <ul>
-                  <li>
-                    <Contents contents={menu.content} />
-                  </li>
-                </ul>
+                <Contents contents={menu.content} />
               </li>
             );
           })}

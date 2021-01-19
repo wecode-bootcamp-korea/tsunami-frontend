@@ -5,10 +5,10 @@ export default class Contents extends Component {
   render() {
     const { contents } = this.props;
     return (
-      <div>
+      <div className="Contents">
         {contents.map((contents) => {
           return (
-            <Link to="#" key="contents">
+            <Link to="#" key={contents}>
               <span>{contents}</span>
             </Link>
           );
