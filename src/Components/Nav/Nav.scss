@@ -8,6 +8,7 @@
       position: fixed;
       width: 100%;
       .navWrapper {
+        background-color: white;
         display: flex;
         width: 100%;
       }
@@ -40,7 +41,7 @@
       .subnav {
         display: flex;
         width: 100%;
-        background-color: rgba($color: #ffffff, $alpha: 0.5);
+        background-color: rgba($color: #ffffff, $alpha: 0.9);
         justify-content: space-evenly;
         .subnavBox {
           .eventMenu {
