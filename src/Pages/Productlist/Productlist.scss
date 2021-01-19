@@ -1,103 +1,96 @@
-.Productlist {
-  // display: flex;
-  // justify-content: center;
-  // width: 100%;
-  // height: 100%;
-
-  main {
-    background-color: orange;
-    margin-top: 100px;
+main {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  .inner {
+    width: 65%;
+  }
+  .innerSort {
+    padding-left: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    h3 {
+      font-size: 25px;
+      padding-right: 10px;
+    }
+    span {
+      padding-top: 10px;
+    }
+  }
+  .title {
+    padding-bottom: 20px;
     display: flex;
     justify-content: center;
-    .inner {
-      width: 80%;
+    a {
+      padding-top: 20px;
+      text-decoration: none;
+      font-size: 35px;
     }
-    .innerSort {
-      background-color: palegreen;
-      padding-left: 10px;
-      padding-bottom: 20px;
+  }
+  .bottomLine {
+    border-bottom: solid 1px black;
+  }
+  .contentList {
+    display: flex;
+    justify-content: center;
+    display: flex;
+    .contentBox {
+      padding-bottom: 50px;
       display: flex;
-      h3 {
-        font-size: 25px;
-        padding-right: 10px;
-      }
-      span {
-        padding-top: 10px;
+      flex-direction: column;
+      padding-top: 2%;
+      width: 250px;
+      padding-left: 50px;
+      li a {
+        font-size: 13px;
       }
     }
-    .title {
-      background-color: pink;
-      padding-bottom: 20px;
+    .listTop {
+      font-weight: bold;
+      margin-bottom: 12px;
+      font-size: 15px;
+      text-decoration: none;
+    }
+  }
+  .Productinfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .ProductItems {
       display: flex;
-      justify-content: center;
-      a {
-        padding-top: 20px;
-        text-decoration: none;
-        font-size: 35px;
-      }
-    }
-    .bottomLine {
-      border-bottom: solid 1px black;
-    }
-    .contentList {
-      display: flex;
-      .contentBox {
-        padding-bottom: 50px;
-        display: flex;
-        flex-direction: column;
-        padding-top: 2%;
-        width: 250px;
-        padding-left: 50px;
-        li a {
-          font-size: 13px;
-        }
-      }
-      .listTop {
-        font-weight: bold;
-        margin-bottom: 12px;
-        font-size: 15px;
-        text-decoration: none;
-      }
-    }
-    .Productinfo {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      .ProductItems {
-        display: flex;
-        ul {
-          li {
-            .itemList {
-              .thumbImg {
-                img {
-                  width: 285px;
-                  height: 285px;
+      ul {
+        li {
+          .itemList {
+            // padding: 0 10px;
+            .thumbImg {
+              img {
+                width: 285px;
+                height: 285px;
+              }
+            }
+            a {
+              display: flex;
+              flex-direction: column;
+              text-decoration: none;
+              span {
+                padding: 5px 0;
+                &:nth-child(1) {
+                  font-size: 12px;
+                  color: lightgray;
+                }
+                &:nth-child(2) {
+                  font-size: 15px;
+                }
+                &:nth-child(3) {
+                  font-size: 15px;
+                  font-weight: bold;
+                  color: rgb(255, 81, 0);
+                  padding-bottom: 80px;
                 }
               }
-              a {
+              .info {
                 display: flex;
                 flex-direction: column;
-                text-decoration: none;
-                span {
-                  padding: 5px 0;
-                  &:nth-child(1) {
-                    font-size: 12px;
-                    color: lightgray;
-                  }
-                  &:nth-child(2) {
-                    font-size: 15px;
-                  }
-                  &:nth-child(3) {
-                    font-size: 15px;
-                    font-weight: bold;
-                    color: rgb(255, 81, 0);
-                    padding-bottom: 80px;
-                  }
-                }
-                .info {
-                  display: flex;
-                  flex-direction: column;
-                }
               }
             }
           }
