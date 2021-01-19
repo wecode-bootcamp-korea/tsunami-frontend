@@ -4,22 +4,100 @@ body {
   .Productdetail {
     margin-top: 100px;
     background-color: yellowgreen;
-    align-items: flex-start;
+    .propic {
+      background-color: royalblue;
+      width: 600px;
+      height: 600px;
+      padding-right: 70px;
+      img {
+        width: 530px;
+        height: 530px;
+      }
+    }
+    .proinfo {
+      background-color: rgb(112, 135, 202);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      // align-items: flex-start;
+      h2 {
+        margin-top: 0px;
+        // background-color: brown;
+        display: flex;
+        flex-direction: column;
+        font-size: 35px;
+        .mainLink {
+          display: flex;
+          text-decoration: none;
+          span {
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: normal;
+            &::after {
+              content: " > ";
+            }
+          }
+        }
+      }
+      .bottomLine {
+        margin-top: -10px;
+        border-bottom: black solid 2px;
+      }
+      .pinfoTxt {
+        margin-top: -20px;
+        caption {
+          opacity: 0;
+        }
+        .infoSpec {
+          span {
+            background-color: lightgray;
+            border-radius: 100px;
+            padding: 5px 10px;
+            font-size: 15px;
+            margin: auto 3px;
+          }
+          &::after {
+            border-bottom: lightgray 2px solid;
+          }
+        }
+      }
+      .share {
+        background-color: cadetblue;
+        margin-bottom: -30px;
+        // margin-bottom: 0px;
+        display: flex;
+        justify-content: flex-end;
+        .facebookBtn {
+          img {
+            width: 40px;
+          }
+        }
+        .kakaostoryBtn {
+          img {
+            width: 50px;
+          }
+        }
+        .urlBtn {
+          img {
+            width: 40px;
+            border: solid 3px black;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
     .inner {
+      display: flex;
       align-items: flex-start;
-      background-color: wheat;
+      justify-content: flex-end;
+      // background-color: wheat;
       .moveBox {
         background-color: yellow;
         display: flex;
         font-size: small;
-        justify-content: flex-end;
-        li:nth-child()
-        // li::before {
-        //   &:nth-child(1) {
-        //     content: "";
-        //   }
-        //   content: " > ";
-        // }
+        li::after {
+          content: " > ";
+        }
         Link {
           text-decoration: none;
         }
