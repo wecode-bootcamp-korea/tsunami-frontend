@@ -1,11 +1,31 @@
 import React, { Component } from "react";
 import { PRODUCTLIST } from "../../config";
+import { withRouter } from "react-router-dom";
+import Nav from "../../Components/Nav/Nav";
 
-export default class Productdetail extends Component {
+class Productdetail extends Component {
+  constructor() {
+    super();
+    this.state = {
+      productDetail: [],
+    };
+  }
   componentDidMount = () => {
-    fetch(`${PRODUCTLIST}`);
+    fetch(`${PRODUCTLIST}${this.props.match.params.id}`)
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          productDetail: res.product,
+        });
+      });
   };
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <Nav />
+      </div>
+    );
   }
 }
+
+export default withRouter(Productdetail);

@@ -2,15 +2,14 @@ import React, { Component } from "react";
 import Nav from "../../Components/Nav/Nav";
 import Productinfo from "./Productinfo";
 import { Link } from "react-router-dom";
-import "./Productlist.scss";
 import { PRODUCTLIST } from "../../config";
 import { withRouter } from "react-router-dom";
+import "./Productlist.scss";
 
 class Productlist extends Component {
   constructor() {
     super();
     this.state = {
-      productDetail: [],
       productInfo: [],
       currentId: 0,
     };
@@ -19,6 +18,7 @@ class Productlist extends Component {
   // `${PRODUCTLIST}?category=1`
   componentDidMount = () => {
     fetch(`${PRODUCTLIST}`)
+      // fetch("http://192.168.202.128:3000/data/productlist.json")
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -28,18 +28,13 @@ class Productlist extends Component {
   };
 
   getId = (id) => {
-    // fetch(`${PRODUCTLIST}${id}`)
-      fetch(`http://192.168.202.128:3000/data/productlist.json/${id}`)
-        .then((res) => res.json())
-        .then((res) => {
-          this.setState({ productDetail: res.product });
-          console.log(this.state.productDetail);
-        });
-    this.props.history.push("/productdetail");
-  };
-
-  componentDidUpdate = () => {
-    // this.props.history.push("")
+    // fetch(`http://192.168.202.128:3000/data/productlist.json/${id}`)
+    //   .then((res) => res.json())
+    //   .then((res) => {
+    //     this.setState({ productDetail: res.product });
+    //     console.log(this.state.productDetail);
+    //   });
+    this.props.history.push(`/productdetail/${id}`);
   };
 
   render() {
@@ -174,11 +169,7 @@ class Productlist extends Component {
               </div>
             </div>
             <div className="sortArea">
-              <Productinfo
-                productInfo={productInfo}
-                getId={this.getId}
-                // onClick={this.componentDidUpdate}
-              />
+              <Productinfo productInfo={productInfo} getId={this.getId} />
             </div>
           </div>
         </main>
