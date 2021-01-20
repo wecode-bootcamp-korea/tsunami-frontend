@@ -7,7 +7,7 @@ class FindPW extends Component {
   constructor() {
     super();
     this.state = {
-      user_name: "",
+      userName: "",
       name: "",
       email: "",
       checkedIdBlank: false,
@@ -24,7 +24,7 @@ class FindPW extends Component {
   };
 
   handleFindPw = () => {
-    const checkedIdBlank = this.state.user_name.length === 0;
+    const checkedIdBlank = this.state.userName.length === 0;
     const checkedNameBlank = this.state.name.length === 0;
     const checkedEmailBlank = this.state.email.length === 0;
     this.setState({
@@ -39,7 +39,7 @@ class FindPW extends Component {
     fetch(FINDPW_API, {
       method: "POST",
       body: JSON.stringify({
-        username: this.state.user_name,
+        username: this.state.userName,
         name: this.state.name,
         email: this.state.email,
       }),
@@ -52,10 +52,12 @@ class FindPW extends Component {
         );
         const PASSWORD = window.localStorage.getItem("PASSWORD");
         if (PASSWORD !== "undefined") {
+          console.log(result);
           alert(`당신의 임시비밀번호는${PASSWORD}입니다!`);
           this.props.history.push("/");
           return;
         } else {
+          console.log(result);
           alert("잘못된정보입니다! 기억하세요!");
         }
       });
@@ -71,7 +73,7 @@ class FindPW extends Component {
               type="text"
               placeholder="아이디 입력"
               className="id Input"
-              name="user_name"
+              name="userName"
               onChange={this.handleInput}
             />
           </div>

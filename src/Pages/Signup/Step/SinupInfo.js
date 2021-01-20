@@ -15,14 +15,15 @@ class SinupInfo extends Component {
       name: "",
       username: "",
       password: "",
+      checkPassword: "",
       email: "",
-      phone_number: "",
+      phoneNumber: "",
       birthday: "",
-      is_sms_agreed: false,
-      is_email_agreed: false,
-      is_over_14: false,
-      is_valid_username: false,
-      is_valid_email: false,
+      isSnsAgreed: false,
+      isEmailAgreed: false,
+      isOver14: false,
+      isValidUsername: false,
+      isValidEmail: false,
     };
   }
 
@@ -46,29 +47,32 @@ class SinupInfo extends Component {
       name,
       username,
       password,
+      checkPassword,
       email,
-      phone_number,
-      is_valid_username,
-      is_valid_email,
+      phoneNumber,
+      isValidUsername,
+      isValidEmail,
       birthday,
-      is_sms_agreed,
-      is_email_agreed,
+      isSnsAgreed,
+      isEmailAgreed,
     } = this.state;
     if (
       name.length <= 0 ||
       username.length <= 0 ||
       password.length <= 0 ||
       email.length <= 0 ||
-      phone_number.length <= 0
+      phoneNumber.length <= 0
     ) {
       alert("* 필수값을 입력하세요!");
       return;
     }
-    if (!(is_valid_username && is_valid_email)) {
+    if (password !== checkPassword) return alert("비밀번호가 같지 않아요!");
+    if (!(isValidUsername && isValidEmail)) {
       return alert("중복확인을 실행하시키세요!");
     }
     if (this.checkvalidPw()) return alert("비밀번호를 확인하세요");
-    if (!this.state.is_over_14) return alert("14세 이상만 가입가능합니다.");
+    if (!this.state.isOver14) return alert("14세 이상만 가입가능합니다.");
+
     fetch(SIGNUP_API, {
       method: "POST",
       body: JSON.stringify({
@@ -76,10 +80,10 @@ class SinupInfo extends Component {
         username,
         password,
         email,
-        phone_number,
+        phoneNumber,
         birthday,
-        is_sms_agreed,
-        is_email_agreed,
+        isSnsAgreed,
+        isEmailAgreed,
       }),
     })
       .then((response) => response.json())
@@ -87,8 +91,6 @@ class SinupInfo extends Component {
         if (result.MESSAGE === "USER_CREATED") {
           alert("회원가입이 완료 되었습니다!");
           this.props.setStep(3);
-        } else {
-          alert("회원가입에 이상이 있습니다");
         }
       });
   };
@@ -111,7 +113,7 @@ class SinupInfo extends Component {
           alert("이미 사용중인 아이디입니다!");
         } else {
           this.setState({
-            is_valid_username: true,
+            isValidUsername: true,
           });
           alert("사용 가능한 아이디입니다!");
         }
@@ -133,7 +135,7 @@ class SinupInfo extends Component {
           return alert("이미 사용중인 이메일입니다!");
         } else {
           this.setState({
-            is_valid_email: true,
+            isValidEmail: true,
           });
           return alert("사용 가능한 이메일입니다!");
         }
@@ -158,7 +160,7 @@ class SinupInfo extends Component {
 
   handlecheckAge = (e) => {
     this.setState({
-      is_over_14: e.target.checked,
+      isOver14: e.target.checked,
     });
   };
 
@@ -225,7 +227,8 @@ class SinupInfo extends Component {
               type="password"
               placeholder="비밀번호 재입력"
               className="pw Input"
-              id="pw2"
+              name="checkPassword"
+              onChange={this.handleInput}
             />
           </div>
           <div className="emailBox">
@@ -253,7 +256,7 @@ class SinupInfo extends Component {
               type="number"
               placeholder="숫자만 입력(11자리)"
               className="PhoneNum Input"
-              name="phone_number"
+              name="phoneNumber"
               onChange={this.handleInput}
             />
           </div>
@@ -275,7 +278,7 @@ class SinupInfo extends Component {
                   <input
                     type="checkbox"
                     className="agree Input"
-                    name="is_sms_agreed"
+                    name="isSnsAgreed"
                     onChange={this.handleInputCheckbox}
                   />
                   <label>
@@ -286,7 +289,7 @@ class SinupInfo extends Component {
                   <input
                     type="checkbox"
                     className="agree Input"
-                    name="is_email_agreed"
+                    name="isEmailAgreed"
                     onChange={this.handleInputCheckbox}
                   />
                   <label>
