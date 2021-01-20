@@ -87,6 +87,8 @@ class SinupInfo extends Component {
         if (result.MESSAGE === "USER_CREATED") {
           alert("회원가입이 완료 되었습니다!");
           this.props.setStep(3);
+        } else {
+          alert("회원가입에 이상이 있습니다");
         }
       });
   };
@@ -102,18 +104,16 @@ class SinupInfo extends Component {
       alert("아이디를 확인하세요");
       return;
     }
-    fetch(`${DUPLICATION_USERNAME_API}${username}`, {
-      method: "GET",
-    })
+    fetch(`${DUPLICATION_USERNAME_API}${username}`)
       .then((response) => response.json())
       .then((result) => {
         if (result.DUPLICATION) {
-          return alert("이미 사용중인 아이디입니다!");
+          alert("이미 사용중인 아이디입니다!");
         } else {
           this.setState({
             is_valid_username: true,
           });
-          return alert("사용 가능한 아이디입니다!");
+          alert("사용 가능한 아이디입니다!");
         }
       });
   };
@@ -315,7 +315,7 @@ class SinupInfo extends Component {
               회원정보수정에서 등록할 수 있습니다.
             </p>
             <div className="buttonBox">
-              <Link to="/step">
+              <Link to="/signup">
                 <button type="submit" className="goto step1">
                   취소
                 </button>

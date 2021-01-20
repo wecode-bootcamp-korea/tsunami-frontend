@@ -11,23 +11,23 @@ class Agree extends Component {
   constructor() {
     super();
     this.state = {
-      is_all_agreed: false,
-      is_mall_agreed: false,
-      is_tte_agreed: false,
-      is_personaldata_agreed: false,
-      is_toggle1: true,
-      is_toggle2: false,
-      is_toggle3: false,
+      isAllAgreed: false,
+      isMallAgreed: false,
+      isTteAgreed: false,
+      isPersonaldataAgreed: false,
+      mallToggle: true,
+      tteToggle: false,
+      infoToggle: false,
     };
   }
 
   handleAllagreeCheckbox = (e) => {
     const { checked } = e.target;
     this.setState({
-      is_all_agreed: checked,
-      is_mall_agreed: checked,
-      is_tte_agreed: checked,
-      is_personaldata_agreed: checked,
+      isAllAgreed: checked,
+      isMallAgreed: checked,
+      isTteAgreed: checked,
+      isPersonaldataAgreed: checked,
     });
   };
 
@@ -43,50 +43,39 @@ class Agree extends Component {
   };
 
   changeBoxBool = () => {
-    const {
-      is_mall_agreed,
-      is_tte_agreed,
-      is_personaldata_agreed,
-    } = this.state;
+    const { isMallAgreed, isTteAgreed, isPersonaldataAgreed } = this.state;
 
     this.setState({
-      is_all_agreed: is_mall_agreed && is_tte_agreed && is_personaldata_agreed,
+      isAllAgreed: isMallAgreed && isTteAgreed && isPersonaldataAgreed,
     });
   };
 
-  handleAgreeBtn1 = () => {
+  handleAgreeBtn = (e) => {
+    const { name } = e.target;
     this.setState({
-      is_toggle1: !this.state.is_toggle1,
-    });
-  };
-
-  handleAgreeBtn2 = () => {
-    this.setState({
-      is_toggle2: !this.state.is_toggle2,
-    });
-  };
-
-  handleAgreeBtn3 = () => {
-    this.setState({
-      is_toggle3: !this.state.is_toggle3,
+      [name]: !this.state[name],
     });
   };
 
   handlegotostep2box = () => {
-    const {
-      is_mall_agreed,
-      is_tte_agreed,
-      is_personaldata_agreed,
-    } = this.state;
-    if (is_mall_agreed && is_tte_agreed && is_personaldata_agreed) {
+    const { isMallAgreed, isTteAgreed, isPersonaldataAgreed } = this.state;
+    if (isMallAgreed && isTteAgreed && isPersonaldataAgreed) {
       this.props.setStep(2);
     } else {
       alert("이용약관에 모두 동의해주세요!");
-      return;
     }
   };
 
   render() {
+    const {
+      isAllAgreed,
+      isMallAgreed,
+      isTteAgreed,
+      isPersonaldataAgreed,
+      mallToggle,
+      tteToggle,
+      infoToggle,
+    } = this.state;
     return (
       <div className="Agree">
         <div className="stepWrapper">
@@ -94,8 +83,8 @@ class Agree extends Component {
             <input
               className="agreeCheckbox"
               type="checkbox"
-              name="is_all_agreed"
-              checked={this.state.is_all_agreed}
+              name="isAllAgreed"
+              checked={isAllAgreed}
               onChange={this.handleAllagreeCheckbox}
             />
             <label>쓰나미몰 통합회원 가입 약관 모두 동의</label>
@@ -106,40 +95,40 @@ class Agree extends Component {
               <input
                 className="essential"
                 type="checkbox"
-                name="is_mall_agreed"
-                checked={this.state.is_mall_agreed}
+                name="isMallAgreed"
+                checked={isMallAgreed}
                 onChange={this.handleAgreeCheckbox}
               />
               <label>쓰나미몰 서비스 이용약관(필수)</label>
-              <button onClick={this.handleAgreeBtn1} />
+              <button onClick={this.handleAgreeBtn} name="mallToggle" />
             </div>
-            {this.state.is_toggle1 && <Useagreement />}
+            {mallToggle && <Useagreement />}
 
             <div className="essentialBox">
               <input
                 className="essential"
                 type="checkbox"
-                name="is_tte_agreed"
-                checked={this.state.is_tte_agreed}
+                name="isTteAgreed"
+                checked={isTteAgreed}
                 onChange={this.handleAgreeCheckbox}
               />
               <label>쓰나르떼 서비스 이용약관(필수)</label>
-              <button onClick={this.handleAgreeBtn2} />
+              <button onClick={this.handleAgreeBtn} name="tteToggle" />
             </div>
 
-            {this.state.is_toggle2 && <Useagreement2 />}
+            {tteToggle && <Useagreement2 />}
             <div className="essentialBox">
               <input
                 className="essential"
                 type="checkbox"
-                name="is_personaldata_agreed"
-                checked={this.state.is_personaldata_agreed}
+                name="isPersonaldataAgreed"
+                checked={isPersonaldataAgreed}
                 onChange={this.handleAgreeCheckbox}
               />
               <label>개인정보 수집/이용동의(필수)</label>
-              <button onClick={this.handleAgreeBtn3} />
+              <button onClick={this.handleAgreeBtn} name="infoToggle" />
             </div>
-            {this.state.is_toggle3 && <Useagreement3 />}
+            {infoToggle && <Useagreement3 />}
           </div>
           <div className="buttonBox">
             <Link to="/signup">
