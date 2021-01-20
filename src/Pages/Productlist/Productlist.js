@@ -28,12 +28,13 @@ class Productlist extends Component {
   };
 
   getId = (id) => {
-    fetch(`${PRODUCTLIST}${id}`)
-      .then((res) => res.json())
-      .then((res) => {
-        this.setState({ productDetail: res.product });
-        console.log(this.state.productDetail);
-      });
+    // fetch(`${PRODUCTLIST}${id}`)
+      fetch(`http://192.168.202.128:3000/data/productlist.json/${id}`)
+        .then((res) => res.json())
+        .then((res) => {
+          this.setState({ productDetail: res.product });
+          console.log(this.state.productDetail);
+        });
     this.props.history.push("/productdetail");
   };
 
