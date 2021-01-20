@@ -12,12 +12,19 @@ export default class Navinfo extends Component {
     super();
     this.state = {
       currentId: 0,
+      showMenu: false,
     };
   }
 
   overHandler = (id) => {
     this.setState({
       currentId: id,
+    });
+  };
+
+  usermenuHandler = (toggle) => {
+    this.setState({
+      showMenu: toggle,
     });
   };
 
@@ -50,11 +57,33 @@ export default class Navinfo extends Component {
               );
             })}
           </ul>
-          <span className="navIcon">
-            <img src="/images/shopping-basket.svg" alt="shopping basket" />
-            <img src="/images/user.svg" alt="user icon" />
-            <img src="/images/search.svg" alt="search icon" />
-          </span>
+          <div className="navIcon">
+            <ul>
+              <li>
+                <Link to="#">
+                  <img
+                    src="/images/shopping-basket.svg"
+                    alt="shopping basket"
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className="userList"
+                  onMouseEnter={() => this.usermenuHandler(true)}
+                  onMouseLeave={() => this.usermenuHandler(false)}
+                >
+                  <img src="/images/user.svg" alt="user icon" />
+                </Link>
+              </li>
+              <li>
+                <Link to="#">
+                  <img src="/images/search.svg" alt="search icon" />
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
         <div
           className="subnav"
@@ -63,6 +92,25 @@ export default class Navinfo extends Component {
         >
           {MAPPING_OBJ[this.state.currentId]}
         </div>
+        {this.state.showMenu && (
+          <div
+            className="popinfo"
+            onMouseEnter={() => this.usermenuHandler(true)}
+            onMouseLeave={() => this.usermenuHandler(false)}
+          >
+            <div>
+              <Link to="/signin" className="linkDeco">
+                로그인
+              </Link>
+              <Link to="/signup" className="linkDeco">
+                회원가입
+              </Link>
+              <Link to="/signin" className="linkDeco">
+                비회원로그인
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     );
   }

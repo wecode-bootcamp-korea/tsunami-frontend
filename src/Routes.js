@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 // 컴포넌트
+import Main from "./Pages/Main/Main";
 import Productlist from "./Pages/Productlist/Productlist";
 import Productdetail from "./Pages/Productdetail/Productdetail";
 import Signin from "./Pages/Sign/Signin";
@@ -12,6 +14,7 @@ export default class Routes extends Component {
     return (
       <Router>
         <Switch>
+          <Route exact path="/" component={Main} />
           <Route exact path="/productlist" component={Productlist} />
           <Route exact path="/productdetail" component={Productdetail} />
           <Route exact path="/signin" component={Signin} />
