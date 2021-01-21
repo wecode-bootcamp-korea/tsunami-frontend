@@ -3,6 +3,7 @@ import Nav from "../../Components/Nav/Nav";
 import Productinfo from "./Productinfo";
 import Buttons from "./Components/Buttons";
 import Categoryarea from "./Categoryarea";
+import Footer from "../../Components/Footer/Footer";
 import { PRODUCTLIST } from "../../config";
 import { withRouter } from "react-router-dom";
 import "./Productlist.scss";
@@ -72,6 +73,7 @@ class Productlist extends Component {
             </div>
           </div>
         </main>
+        <Footer />
       </div>
     );
   }

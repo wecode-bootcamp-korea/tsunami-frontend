@@ -4,6 +4,7 @@ import { withRouter } from "react-router-dom";
 import Nav from "../../Components/Nav/Nav";
 import Location from "../Productdetail/Components/Location";
 import Productinfo from "../Productdetail/Productinfo";
+import Footer from "../../Components/Footer/Footer";
 import "./Productdetail.scss";
 import "./Components/Location.scss";
 import "./Components/Share.scss";
@@ -47,6 +48,7 @@ class Productdetail extends Component {
             </main>
           </form>
         </div>
+        <Footer />
       </div>
     );
   }

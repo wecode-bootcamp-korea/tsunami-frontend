@@ -1,0 +1,21 @@
+.Useagreement {
+  box-sizing: border-box;
+  padding: 20px;
+  overflow: scroll;
+  width: 650px;
+  height: 240px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #555;
+  border-left: 1px #ececec solid;
+  border-right: 1px #ececec solid;
+  // background-color: #f9f9f9;
+  &:last-child {
+    border-bottom: 1px #ececec solid;
+  }
+  p {
+    padding: 20px;
+    width: 610px;
+    height: 800px;
+  }
+}
