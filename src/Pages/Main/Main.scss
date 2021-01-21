@@ -1,28 +1,37 @@
+@import "../../Styles/common.scss";
+
 .Main {
+  display: flex;
+  flex-direction: column;
   position: relative;
+  align-items: center;
   top: 100px;
   font-size: 16px;
+  background-color: #ffffff;
 
   .event {
     position: relative;
-    width: 1230px;
     height: 620px;
-    background-color: rgb(234, 219, 188);
+    overflow-y: hidden;
 
-    span {
+    .eventComent {
       position: absolute;
-      top: 200px;
-      left: 40px;
-      font-size: 50px;
+      top: 220px;
+      left: 80px;
+      font-size: 40px;
+    }
+    img {
+      max-width: 100%;
     }
   }
 
   .dly {
     position: relative;
-    margin: 60px 0px 0px 30px;
+    margin-top: 60px;
     width: 1200px;
     height: 700px;
     background-color: #e5e4e2;
+    background-image: url(https://images.unsplash.com/photo-1527597771870-8f1e06ff8d8c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80);
 
     .ment1Box {
       display: flex;
@@ -38,30 +47,10 @@
         height: 170px;
         font-size: 40px;
         border-right: 1px solid black;
-        background-color: pink;
 
         .marca {
           font-weight: 700;
           margin-bottom: 10px;
-        }
-      }
-      .ment2 {
-        display: flex;
-        margin-left: 25px;
-
-        .first {
-          padding: 30px 18px;
-          width: 66px;
-          height: 80px;
-          border: 2px solid black;
-          background-color: blue;
-        }
-        .second {
-          padding: 30px 18px;
-          width: 100px;
-          height: 80px;
-          background-color: blueviolet;
-          text-align: center;
         }
       }
     }
@@ -71,7 +60,6 @@
       position: absolute;
       top: 280px;
       left: 25px;
-      background-color: chartreuse;
       h3 {
         margin-bottom: 17px;
       }
@@ -83,27 +71,83 @@
       display: flex;
       align-items: center;
       position: absolute;
-      left: 20px;
       bottom: 0px;
 
       p {
+        width: 200px;
+        font-size: 20px;
         font-weight: 600;
+        text-align: center;
       }
 
       .recommendBox {
         width: 250px;
         height: 290px;
-        background-color: cornflowerblue;
         border: 1px solid;
-        &:nth-child(2) {
-          width: 380px;
+
+        &:last-child {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: #ffffff;
+
+          .plus {
+            width: 35px;
+          }
+
+          span {
+            margin-top: 15px;
+          }
+        }
+        img {
+          width: 250px;
+        }
+        p {
+          text-align: center;
         }
       }
     }
   }
-  .category {
+  .Tstory {
+    margin-top: 60px;
+    padding-bottom: 100px;
     width: 1200px;
-    height: 590px;
-    background-color: skyblue;
+
+    h2 {
+      padding: 20px 0px;
+      font-size: 40px;
+      text-align: center;
+    }
+
+    .customerComments {
+      display: flex;
+      width: 1200px;
+      overflow: scroll;
+
+      .storyBox {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        border: 1px solid;
+
+        img {
+          padding: 10px;
+          width: 300px;
+        }
+
+        div {
+          padding: 20px;
+
+          h3 {
+            margin-bottom: 4px;
+          }
+
+          p {
+            margin-bottom: 2px;
+          }
+        }
+      }
+    }
   }
 }
