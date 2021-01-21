@@ -1,0 +1,49 @@
+@import "../../Styles/common.scss";
+
+.Footer {
+  display: flex;
+  height: 235px;
+  background-color: #ffffff;
+  .left {
+    @include center;
+    width: 20%;
+    img {
+      width: 130px;
+      height: 25px;
+    }
+  }
+
+  .middle {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 60%;
+    display: flex;
+    .link {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 30px;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      margin-left: 35px;
+      font-size: 14px;
+      color: #555;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    span {
+      font-size: 14px;
+      color: #555;
+    }
+  }
+}

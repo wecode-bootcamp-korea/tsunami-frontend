@@ -57,7 +57,6 @@
         width: 300px;
         height: 170px;
         font-size: 40px;
-        border-right: 1px solid black;
 
         .marca {
           font-weight: 700;
@@ -95,12 +94,23 @@
         position: relative;
         width: 250px;
         height: 290px;
-        border: 1px solid;
+        border: 1px solid #e5e4e2;
         background-color: #ffffff;
 
-        img {
+        .imgWrapper {
           width: 250px;
           height: 230px;
+          overflow: hidden;
+
+          img {
+            transition: 1s;
+            width: 250px;
+            height: 230px;
+
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
         }
 
         p {
@@ -115,6 +125,7 @@
           position: absolute;
           bottom: 5px;
           left: 5px;
+          color: #f7d37f;
           font-size: 14px;
           font-weight: 500;
         }
@@ -130,6 +141,9 @@
             width: 35px;
             height: 35px;
           }
+        }
+        label {
+          margin-top: 2px;
         }
       }
     }

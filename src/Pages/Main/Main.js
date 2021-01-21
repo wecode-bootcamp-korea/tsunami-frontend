@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import { Link } from "react-router-dom";
+import Fade from "react-reveal/Fade";
 
 import { SERVER_JY } from "../../config";
 
@@ -27,6 +28,13 @@ class Main extends Component {
   render() {
     const { bestSeller } = this.state;
     const { tsunamiStory } = this.state;
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    };
     return (
       <div className="Main">
         <section className="event">
@@ -37,24 +45,30 @@ class Main extends Component {
           <img src="/images/back1.jpeg" alt="background"></img>
         </section>
         <section className="dly">
-          <div className="ment1Box">
-            <div className="ment1">
-              <span className="marca">Pen</span>
-              <span>어디까지 써봤니</span>
+          <Fade left>
+            <div className="ment1Box">
+              <div className="ment1">
+                <span className="marca">Pen</span>
+                <span>어디까지 써봤니</span>
+              </div>
             </div>
-          </div>
-          <div className="ment2">
-            <h3>나만의 감성을 DIY</h3>
-            <span>다양한 곳에 마카를 이용해 DIY해보세요.</span>
-            <span>내 감성을 고스란히 담은 소품을 만들 수 있을 거예요.</span>
-          </div>
+          </Fade>
+          <Fade left>
+            <div className="ment2">
+              <h3>나만의 감성을 DIY</h3>
+              <span>다양한 곳에 마카를 이용해 DIY해보세요.</span>
+              <span>내 감성을 고스란히 담은 소품을 만들 수 있을 거예요.</span>
+            </div>
+          </Fade>
           <div className="recommendWrapper">
             <p>Best Seller</p>
             {bestSeller &&
               bestSeller.map((product) => {
                 return (
                   <div className="recommendBox" key={product.id}>
-                    <img src={product.imageUrl} alt="예제" />
+                    <div className="imgWrapper">
+                      <img src={product.imageUrl} alt="예제" />
+                    </div>
                     <p>{product.name}</p>
                     <span>{product.price}원</span>
                   </div>
@@ -65,7 +79,7 @@ class Main extends Component {
               <Link to="/productlist">
                 <img src="images/plus.png" alt="plus" className="plus" />
               </Link>
-              <label>더보기</label>
+              <label>buy now!</label>
             </div>
           </div>
         </section>

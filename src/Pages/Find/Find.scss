@@ -1,0 +1,53 @@
+@import "../../Styles/common.scss";
+
+.Find {
+  position: relative;
+  top: 100px;
+  height: 1000px;
+  font-size: 16px;
+  background-color: $basis;
+
+  .header {
+    height: 190px;
+    text-align: center;
+    line-height: 190px;
+    font-size: 48px;
+    font-weight: 350;
+    background-color: #faf9f7;
+  }
+
+  .FindWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+
+    .findBox {
+      display: flex;
+      justify-content: center;
+      width: 650px;
+
+      .isFind {
+        line-height: 50px;
+        font-size: 20px;
+        width: 50%;
+        text-align: center;
+        color: #999;
+        border-bottom: 3px solid #ddd;
+        cursor: pointer;
+
+        &.active {
+          border-bottom: 3px solid #000000;
+          color: #000000;
+        }
+      }
+    }
+
+    .info.active {
+      display: flex;
+      margin-right: 40px;
+      font-size: 14px;
+      color: red;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "../../Styles/common.scss";
+
+.Step {
+  animation: fadein 2s;
+  position: relative;
+  top: 100px;
+  font-size: 16px;
+  background-color: $basis;
+
+  header {
+    height: 190px;
+    text-align: center;
+    line-height: 190px;
+    font-size: 48px;
+    font-weight: 350;
+    background-color: #faf9f7;
+  }
+
+  .stepWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+
+    .stepBox {
+      display: flex;
+      justify-content: space-between;
+      width: 650px;
+
+      p {
+        line-height: 50px;
+        font-size: 20px;
+        text-align: center;
+
+        &.active {
+          font-weight: 800;
+        }
+      }
+
+      img {
+        width: 20px;
+      }
+    }
+  }
+}

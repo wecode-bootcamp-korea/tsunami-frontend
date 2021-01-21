@@ -1,0 +1,55 @@
+.UnmemberDeliveryTracking {
+  animation: fadein 2s;
+  height: 700px;
+
+  .Box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    width: 405px;
+    height: 50px;
+  }
+
+  .input {
+    width: 290px;
+    height: 50px;
+    border: 1px solid #ccc;
+  }
+
+  .orderer.Box {
+    margin-top: 50px;
+  }
+
+  .info.active {
+    display: flex;
+    margin-left: 115px;
+    font-size: 14px;
+    color: red;
+  }
+
+  .trackingBtn {
+    margin-top: 25px;
+    width: 405px;
+    height: 64px;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 3px;
+  }
+
+  .infoBox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 405px;
+    font-size: 13px;
+
+    span {
+      margin-top: 2px;
+      color: #999;
+      font-weight: 300;
+    }
+  }
+}

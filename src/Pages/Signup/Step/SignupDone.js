@@ -1,25 +1,21 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import "./Signup.scss";
+import "./SignupDone.scss";
 
-class Signup extends Component {
+class SignupDone extends Component {
   render() {
     return (
-      <div className="Signup">
-        <header>회원가입</header>
-        <div className="welcomeBox">
-          <span>Stationery Lifestyle Shop</span>
-          <span>쓰나미몰에 오신 걸 환영합니다.</span>
-        </div>
-        <div className="welcomeWrapper">
-          <div className="btnBox">
-            <Link to="/step">
-              <button>회원가입하기</button>
+      <div className="SignupDone">
+        <div className="completeWrapper">
+          <div className="completeBox">
+            <span>WELCOME! 회원가입이 완료되었습니다.</span>
+            <Link to="/">
+              <button>메인으로</button>
             </Link>
           </div>
           <div className="eventBox">
-            <span>쓰나미몰 회원 공통 혜택</span>
+            <span>신규회원 공통 혜택</span>
             <div className="couponWrapper">
               <div className="couponBox">
                 <img src="/images/sale.png" alt="sale" />
@@ -41,4 +37,4 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+export default SignupDone;
