@@ -23,20 +23,38 @@ class Step extends Component {
 
   render() {
     const { step } = this.state;
+    const STEP_LISTS = [
+      "STEP1.약관동의",
+      "STEP2.회원정보 입력",
+      "STEP3.가입완료",
+    ];
+
+    const MAPPING_OBJ = {
+      1: <Agree setStep={this.setStep} />,
+      2: <SignupInfo setStep={this.setStep} />,
+      3: <SignupDone />,
+    };
+
     return (
       <div className="Step">
         <header>회원가입</header>
         <div className="stepWrapper">
           <div className="stepBox">
-            <p className={step === 1 && "active"}>STEP1.약관동의</p>
-            <img src="/images/right-solid.svg" alt="화살표" />
-            <p className={step === 2 && "active"}>STEP2.회원정보 입력</p>
-            <img src="/images/right-solid.svg" alt="화살표" />
-            <p className={step === 3 && "active"}>STEP3.가입완료</p>
+            {STEP_LISTS.map((list, idx) => {
+              return (
+                <>
+                  <p className={step === idx + 1 && "active"}>{list}</p>
+                  {idx !== 2 && (
+                    <img src="/images/right-solid.svg" alt="화살표" />
+                  )}
+                </>
+              );
+            })}
           </div>
-          {step === 1 && <Agree setStep={this.setStep} />}
+          {MAPPING_OBJ[step]}
+          {/* {step === 1 && <Agree setStep={this.setStep} />}
           {step === 2 && <SignupInfo setStep={this.setStep} />}
-          {step === 3 && <SignupDone />}
+          {step === 3 && <SignupDone />} */}
         </div>
       </div>
     );
