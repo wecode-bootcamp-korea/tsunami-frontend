@@ -1,0 +1,16 @@
+.Color {
+  display: flex;
+  ul {
+    display: flex;
+    li {
+      display: flex;
+      align-items: center;
+      margin: auto 5px;
+      img {
+        width: 25px;
+        margin-right: 5px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

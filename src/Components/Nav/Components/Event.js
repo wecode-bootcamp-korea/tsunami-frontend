@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Eventdata } from "../Navdata/Eventdata";
+import { Eventdata } from "../Navdata/Navdata";
 import Contents from "./Contents/Contents";
 
 export default class Event extends Component {

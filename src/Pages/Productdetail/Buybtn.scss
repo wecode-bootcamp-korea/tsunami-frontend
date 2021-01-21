@@ -1,0 +1,37 @@
+.Buybtn {
+  display: flex;
+  justify-content: center;
+  border-bottom: black 1px solid;
+
+  Button {
+    width: 236px;
+    height: 40px;
+    margin: 10px 5px;
+    margin-top: 100px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .btnGray {
+    background-color: gray;
+    color: white;
+    font-size: 15px;
+    border: gray 1px solid;
+    font-weight: bold;
+  }
+  .btnBlack {
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    border: black 1px solid;
+    font-weight: bold;
+  }
+  .btnWhite {
+    background-color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: black 1px solid;
+    width: 88px;
+  }
+}

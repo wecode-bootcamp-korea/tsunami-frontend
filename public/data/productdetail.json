@@ -9,38 +9,48 @@
     "origin": "\ub300\ud55c\ubbfc\uad6d/(\uc8fc)\uc4f0\ub098\ubbf8",
     "body_colors": [
       {
-        "\ube14\ub8e8": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/23_58724_P_120x80_20190422180922.blob"
+        "name": "\ube14\ub8e8",
+        "url": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/23_58724_P_120x80_20190422180922.blob"
       },
       {
-        "\uc610\ub85c\uc6b0": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/23_58724_P_120x80_20190422180922.blob"
+        "name": "\uc610\ub85c\uc6b0",
+        "url": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/23_58724_P_120x80_20190422180922.blob"
       },
       {
-        "\ub9c8\uc820\ud0c0": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/23_58724_P_120x80_20190422180922.blob"
+        "name": "\ub9c8\uc820\ud0c0",
+        "url": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/23_58724_P_120x80_20190422180922.blob"
       },
       {
-        "\ube14\ub8e8": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/23_58724_P_120x80_20190422180922.blob"
+        "name": "\ube14\ub8e8",
+        "url": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/23_58724_P_120x80_20190422180922.blob"
       },
       {
-        "\uc610\ub85c\uc6b0": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/23_58724_P_120x80_20190422180922.blob"
+        "name": "\uc610\ub85c\uc6b0",
+        "url": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/23_58724_P_120x80_20190422180922.blob"
       },
       {
-        "\ub9c8\uc820\ud0c0": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/23_58724_P_120x80_20190422180922.blob"
+        "name": "\ub9c8\uc820\ud0c0",
+        "url": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/23_58724_P_120x80_20190422180922.blob"
       }
     ],
     "ink_colors": [
       {
-        "\ube14\ub8e8": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/23_58724_P_120x80_20190422180922.blob"
+        "name": "\ube14\ub8e8",
+        "url": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/23_58724_P_120x80_20190422180922.blob"
       },
       {
-        "\uc610\ub85c\uc6b0": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/23_58724_P_120x80_20190422180922.blob"
+        "name": "\uc610\ub85c\uc6b0",
+        "url": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/23_58724_P_120x80_20190422180922.blob"
       },
       {
-        "\ub9c8\uc820\ud0c0": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/23_58724_P_120x80_20190422180922.blob"
+        "name": "\ub9c8\uc820\ud0c0",
+        "url": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/23_58724_P_120x80_20190422180922.blob"
       }
     ],
     "thicknesses": [
       {
-        "1.0": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/24_58564_P_120x80.blob"
+        "name": "1.0",
+        "url": "https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/attribute/24_58564_P_120x80.blob"
       }
     ],
     "keywords": [

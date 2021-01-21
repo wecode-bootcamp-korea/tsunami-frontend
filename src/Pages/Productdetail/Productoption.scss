@@ -1,0 +1,12 @@
+.Productoption {
+  display: flex;
+  justify-content: flex-end;
+  
+
+  .dropdown {
+    display: flex;
+    background-color: white;
+    height: 35px;
+    width: 100%;
+  }
+}

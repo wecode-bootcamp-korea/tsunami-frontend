@@ -1,26 +1,29 @@
-main {
+.pMain {
   margin-top: 100px;
   display: flex;
   justify-content: center;
+  
   .inner {
     width: 65%;
   }
   .innerSort {
+    height: 50px;
     padding-left: 10px;
-    padding-bottom: 20px;
     display: flex;
+
     h3 {
       font-size: 25px;
       padding-right: 10px;
     }
     span {
-      padding-top: 10px;
+      padding-top: 35px;
     }
   }
   .title {
     padding-bottom: 20px;
     display: flex;
     justify-content: center;
+
     a {
       padding-top: 20px;
       text-decoration: none;
@@ -34,6 +37,7 @@ main {
     display: flex;
     justify-content: center;
     display: flex;
+
     .contentBox {
       padding-bottom: 50px;
       display: flex;
@@ -41,13 +45,14 @@ main {
       padding-top: 2%;
       width: 250px;
       padding-left: 50px;
+
       li a {
         font-size: 13px;
       }
     }
     .listTop {
       font-weight: bold;
-      margin-bottom: 12px;
+      // margin-bottom: 12px;
       font-size: 15px;
       text-decoration: none;
     }
@@ -56,12 +61,13 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
     .ProductItems {
       display: flex;
+
       ul {
         li {
           .itemList {
-            // padding: 0 10px;
             .thumbImg {
               img {
                 width: 285px;
@@ -72,8 +78,10 @@ main {
               display: flex;
               flex-direction: column;
               text-decoration: none;
+
               span {
                 padding: 5px 0;
+
                 &:nth-child(1) {
                   font-size: 12px;
                   color: lightgray;

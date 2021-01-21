@@ -1,24 +1,12 @@
 import React, { Component } from "react";
-import { Storypickdata } from "../Navdata/Storypickdata";
-import { Link } from "react-router-dom";
-import Contents from "./Contents/Contents";
+import { Storypickdata } from "../Navdata/Navdata";
+import Submenu from "../Components/Contents/Submenu";
 
 export default class Storypick extends Component {
   render() {
     return (
       <div className="Storypick">
-        <ul className="subnavBox">
-          {Storypickdata.map((menu) => {
-            return (
-              <li className="submenuBox" key={menu}>
-                <Link to="#" className="mainItem">
-                  <span>{menu.title}</span>
-                </Link>
-                <Contents contents={menu.content} />
-              </li>
-            );
-          })}
-        </ul>
+        <Submenu navData={Storypickdata} />
       </div>
     );
   }
