@@ -7,6 +7,8 @@ import SignupDone from "./Step/SignupDone";
 
 import "./Step.scss";
 
+const STEP_LISTS = ["STEP1.약관동의", "STEP2.회원정보 입력", "STEP3.가입완료"];
+
 class Step extends Component {
   constructor() {
     super();
@@ -23,18 +25,12 @@ class Step extends Component {
 
   render() {
     const { step } = this.state;
-    const STEP_LISTS = [
-      "STEP1.약관동의",
-      "STEP2.회원정보 입력",
-      "STEP3.가입완료",
-    ];
 
     const MAPPING_OBJ = {
       1: <Agree setStep={this.setStep} />,
       2: <SignupInfo setStep={this.setStep} />,
       3: <SignupDone />,
     };
-
     return (
       <div className="Step">
         <header>회원가입</header>
@@ -52,9 +48,6 @@ class Step extends Component {
             })}
           </div>
           {MAPPING_OBJ[step]}
-          {/* {step === 1 && <Agree setStep={this.setStep} />}
-          {step === 2 && <SignupInfo setStep={this.setStep} />}
-          {step === 3 && <SignupDone />} */}
         </div>
       </div>
     );
