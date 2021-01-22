@@ -19,7 +19,7 @@ class Footer extends Component {
           </div>
           <div className="info">
             <span>
-              (주)모나미 | 대표 : 송하경 | 주소 : 경기도 용인시 수지구 손곡로 17
+              (주)쓰나미 | 대표 : 황인태 | 주소 : 경기도 용인시 수지구 손곡로 17
               | 사업자등록번호 : 120-81-08227
             </span>
             <span>
@@ -28,22 +28,22 @@ class Footer extends Component {
               제2008-용인수지-0117
             </span>
             <span>
-              본 사이트의 모든 저작물의 저작권은 (주)모나미에 있습니다.
+              본 사이트의 모든 저작물의 저작권은 (주)쓰나미에 있습니다.
             </span>
             <span>
               무단 복제나 도용은 저작권법 제 97조 5항에 의해 법으로 금지되어
               있습니다.
             </span>
-            <span>Copyright(c) (주)모나미 All rights Reserved.</span>
+            <span>Copyright(c) (주)쓰나미 All rights Reserved.</span>
           </div>
         </div>
         <div className="right">
           <select>
-            <option>모나미공식사이트</option>
-            <option>모나르떼</option>
-            <option>모나미컨셉스토어</option>
-            <option>모나미환경사랑미술대회</option>
-            <option>모나미기업서비스</option>
+            <option>쓰나미공식사이트</option>
+            <option>쓰나르떼</option>
+            <option>쓰나미컨셉스토어</option>
+            <option>쓰나미환경사랑미술대회</option>
+            <option>쓰나미기업서비스</option>
           </select>
           <h4>쓰나미 서비스</h4>
           <div>
