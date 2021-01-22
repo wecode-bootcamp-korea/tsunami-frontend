@@ -1,12 +1,17 @@
 import React, { Component } from "react";
-import Nav from "../../Components/Nav/Nav";
 
-export default class Main extends Component {
+import "./Main.scss";
+
+class Main extends Component {
   render() {
     return (
-      <div>
-        <Nav />
+      <div className="Main">
+        <div className="event">
+          <span>이곳은 메인페이지입니다!!!!</span>
+        </div>
       </div>
     );
   }
 }
+
+export default Main;
