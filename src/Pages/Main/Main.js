@@ -85,7 +85,9 @@ class Main extends Component {
                 tsunamiStory.map((story) => {
                   return (
                     <div className="storyBox" key={story.id}>
-                      <img src={story.imageSrc} alt="cus" />
+                      <div className="imgWrapper">
+                        <img src={story.imageSrc} alt="cus" />
+                      </div>
                       <div>
                         <h3>T storyteller</h3>
                         <p>name: {story.name}</p>
