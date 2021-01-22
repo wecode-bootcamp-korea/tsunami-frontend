@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Nav from "../../Components/Nav/Nav";
+import Footer from "../../Components/Footer/Footer";
 
 import MemberSignin from "./Member/MemberSignin";
 import UnmemberDeliveryTracking from "./Member/UnmemberDeliveryTracking";
@@ -23,6 +25,7 @@ class Signin extends Component {
     const { isMember } = this.state;
     return (
       <div className="Signin">
+        <Nav />
         <p className="header">로그인</p>
         <div className="memberWrapper">
           <div className="memberBox">
@@ -45,6 +48,7 @@ class Signin extends Component {
             <UnmemberDeliveryTracking />
           )}
         </div>
+        <Footer />
       </div>
     );
   }

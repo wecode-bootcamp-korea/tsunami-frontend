@@ -1,12 +1,11 @@
 @import "../../Styles/common.scss";
 
 .Signin {
-  position: relative;
-  top: 100px;
   font-size: 16px;
   background-color: $basis;
 
   .header {
+    margin-top: 134px;
     height: 190px;
     text-align: center;
     line-height: 190px;

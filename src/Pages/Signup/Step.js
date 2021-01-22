@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-
+import Nav from "../../Components/Nav/Nav";
+import Footer from "../../Components/Footer/Footer";
 import Agree from "./Step/Agree";
 import SignupInfo from "./Step/SinupInfo";
 import SignupDone from "./Step/SignupDone";
@@ -32,23 +33,27 @@ class Step extends Component {
       3: <SignupDone />,
     };
     return (
-      <div className="Step">
-        <header>회원가입</header>
-        <div className="stepWrapper">
-          <div className="stepBox">
-            {STEP_LISTS.map((list, idx) => {
-              return (
-                <>
-                  <p className={step === idx + 1 && "active"}>{list}</p>
-                  {idx !== 2 && (
-                    <img src="/images/right-solid.svg" alt="화살표" />
-                  )}
-                </>
-              );
-            })}
+      <div>
+        <Nav />
+        <div className="Step">
+          <h1>회원가입</h1>
+          <div className="stepWrapper">
+            <div className="stepBox">
+              {STEP_LISTS.map((list, idx) => {
+                return (
+                  <>
+                    <p className={step === idx + 1 && "active"}>{list}</p>
+                    {idx !== 2 && (
+                      <img src="/images/right-solid.svg" alt="화살표" />
+                    )}
+                  </>
+                );
+              })}
+            </div>
+            {MAPPING_OBJ[step]}
           </div>
-          {MAPPING_OBJ[step]}
         </div>
+        <Footer />
       </div>
     );
   }

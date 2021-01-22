@@ -1,0 +1,135 @@
+header {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  
+  nav {
+    width: 100%;
+
+    .navWrapper {
+      background-color: white;
+      display: flex;
+      width: 100%;
+    }
+    .allmenuBtn {
+      img {
+        width: 25px;
+        margin: 55px 0 0 80px;
+      }
+    }
+    .logo {
+      img {
+        margin: 30px 40px 0 40px;
+        width: 150px;
+      }
+    }
+    .popinfo {
+      margin-top: -50px;
+      display: flex;
+      justify-content: flex-end;
+
+      div {
+        margin-right: 70px;
+        width: 150px;
+        height: 150px;
+        background-color: white;
+        border: solid 1px black;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        text-decoration: none;
+        justify-content: space-around;
+        .linkDeco {
+          text-decoration: none;
+        }
+      }
+    }
+    .navIcon {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 82px;
+
+      img {
+        width: 25px;
+        margin: auto 10px;
+
+        &:hover {
+          cursor: poiner;
+        }
+      }
+    }
+    .subnav {
+      display: flex;
+      width: 100%;
+      background-color: rgba($color: #ffffff, $alpha: 0.9);
+      justify-content: space-evenly;
+
+      .subnavBox {
+        .eventMenu {
+          width: 100%;
+          padding: 20px 200px 30px 200px;
+          display: flex;
+          margin-left: 20px;
+
+          span {
+            padding-left: 30px;
+          }
+        }
+      }
+      .submenuBox {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 50px 30px 50px;
+
+        span {
+          opacity: 1;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .mainItem {
+        font-weight: bold;
+      }
+    }
+    ul {
+      display: flex;
+      margin: 0;
+
+      .mainTitle {
+        text-decoration: none;
+      }
+      .menuItem {
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        font-size: 18px;
+        margin: 0 15px;
+        padding-bottom: 45px;
+        padding-top: 45px;
+
+        &:hover {
+          color: red;
+          border-bottom: solid 3px red;
+          cursor: pointer;
+
+          small {
+            opacity: 1;
+          }
+        }
+        small {
+          opacity: 0;
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          font-weight: normal;
+          font-size: 5px;
+        }
+      }
+    }
+  }
+}

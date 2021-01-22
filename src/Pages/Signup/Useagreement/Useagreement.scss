@@ -1,4 +1,5 @@
 .Useagreement {
+  box-sizing: border-box;
   padding: 20px;
   overflow: scroll;
   width: 650px;
@@ -8,7 +9,7 @@
   color: #555;
   border-left: 1px #ececec solid;
   border-right: 1px #ececec solid;
-  background-color: #f9f9f9;
+  // background-color: #f9f9f9;
   &:last-child {
     border-bottom: 1px #ececec solid;
   }

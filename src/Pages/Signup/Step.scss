@@ -2,12 +2,12 @@
 
 .Step {
   animation: fadein 2s;
-  position: relative;
-  top: 100px;
+  margin-top: 134px;
   font-size: 16px;
   background-color: $basis;
+  margin-bottom: 100px;
 
-  header {
+  h1 {
     height: 190px;
     text-align: center;
     line-height: 190px;

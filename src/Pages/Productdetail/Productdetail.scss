@@ -1,0 +1,28 @@
+.Productdetail {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 130px;
+
+  .productDetailForm {
+    .product {
+      display: flex;
+
+      .propic {
+        width: 600px;
+        height: 600px;
+        padding-right: 70px;
+        padding-top: 70px;
+
+        img {
+          width: 530px;
+          height: 530px;
+        }
+      }
+
+      .bottomLine {
+        margin-top: -10px;
+        border-bottom: black solid 2px;
+      }
+    }
+  }
+}

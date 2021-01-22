@@ -1,7 +1,9 @@
-export const SERVER_GH = "http://10.58.5.224:8000";
-export const SIGNUP_API = `${SERVER_GH}/users/signup`;
-export const SIGNIN_API = `${SERVER_GH}/users/signin`;
-export const FINDID_API = `${SERVER_GH}/users/username`;
-export const FINDPW_API = `${SERVER_GH}/users/password`;
-export const DUPLICATION_USERNAME_API = `${SERVER_GH}/users/duplication/username/`;
-export const DUPLICATION_EMAIL_API = `${SERVER_GH}/users/duplication/email/`;
+export const SERVER = "http://34.207.154.219:8000";
+export const PRODUCTLIST = `${SERVER}/products/`;
+export const SIGNUP_API = `${SERVER}/users/signup`;
+export const SIGNIN_API = `${SERVER}/users/signin`;
+export const SERVER_JY = "http://34.207.154.219:8000/products/main";
+export const DUPLICATION_EMAIL_API = `${SERVER}/users/duplication/email/`;
+export const DUPLICATION_USERNAME_API = `${SERVER}/users/duplication/username/`;
+export const FINDID_API = `${SERVER}/users/username`;
+export const FINDPW_API = `${SERVER}/users/password`;

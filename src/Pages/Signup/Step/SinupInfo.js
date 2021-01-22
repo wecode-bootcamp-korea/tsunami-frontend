@@ -19,7 +19,7 @@ class SinupInfo extends Component {
       email: "",
       phoneNumber: "",
       birthday: "",
-      isSnsAgreed: false,
+      isSmsAgreed: false,
       isEmailAgreed: false,
       isOver14: false,
       isValidUsername: false,
@@ -53,7 +53,7 @@ class SinupInfo extends Component {
       isValidUsername,
       isValidEmail,
       birthday,
-      isSnsAgreed,
+      isSmsAgreed,
       isEmailAgreed,
     } = this.state;
     if (
@@ -82,7 +82,7 @@ class SinupInfo extends Component {
         email,
         phoneNumber,
         birthday,
-        isSnsAgreed,
+        isSmsAgreed,
         isEmailAgreed,
       }),
     })
@@ -278,7 +278,7 @@ class SinupInfo extends Component {
                   <input
                     type="checkbox"
                     className="agree Input"
-                    name="isSnsAgreed"
+                    name="isSmsAgreed"
                     onChange={this.handleInputCheckbox}
                   />
                   <label>

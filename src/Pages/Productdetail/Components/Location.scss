@@ -1,0 +1,19 @@
+.moveBox {
+  margin-top: 130px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  font-size: small;
+
+  li {
+    &::after {
+      content: ">";
+      padding: 0 5px;
+    }
+    &:nth-last-child(1) {
+      &::after {
+        content: " ";
+      }
+    }
+  }
+}

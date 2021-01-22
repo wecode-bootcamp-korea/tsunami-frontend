@@ -1,0 +1,22 @@
+.pageBtn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 300px;
+
+  button {
+    padding: 12px 17px;
+    margin: auto 5px;
+    background-color: white;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+      background-color: black;
+      color: white;
+    }
+    &:active {
+      background-color: black;
+      color: white;
+    }
+  }
+}

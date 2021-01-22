@@ -2,12 +2,13 @@
 
 .Signup {
   animation: fadein 2s;
-  position: relative;
+  margin-top: 134px;
   top: 100px;
   font-size: 16px;
   background-color: $basis;
+  margin-bottom: 100px;
 
-  header {
+  h1 {
     height: 190px;
     text-align: center;
     line-height: 190px;
@@ -52,6 +53,9 @@
         font-weight: 400;
         color: $basis;
         background-color: #000;
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
 
