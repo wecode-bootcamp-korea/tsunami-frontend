@@ -1,0 +1,58 @@
+@import "../../../Styles/common.scss";
+
+.FindPW {
+  animation: fadein 2s;
+  font-size: 16px;
+  background-color: $basis;
+
+  .findPwWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .signBox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      width: 405px;
+      height: 50px;
+
+      .Input {
+        margin-left: 30px;
+        width: 290px;
+        height: 50px;
+        border: 1px solid #ccc;
+      }
+    }
+
+    .id.signBox {
+      margin-top: 50px;
+    }
+
+    .findBtn {
+      margin-top: 25px;
+      width: 405px;
+      height: 64px;
+      font-size: 20px;
+      color: $basis;
+      background-color: black;
+      border: none;
+      border-radius: 3px;
+    }
+
+    .info.box {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      width: 405px;
+      font-size: 13px;
+      font-weight: 300;
+      color: #999;
+
+      span:nth-child(2) {
+        margin: 2px 0px;
+      }
+    }
+  }
+}
