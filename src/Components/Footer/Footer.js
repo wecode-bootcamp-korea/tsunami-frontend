@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import "./Footer.scss";
 
@@ -11,11 +12,11 @@ class Footer extends Component {
         </div>
         <div className="middle">
           <div className="link">
-            <a>회사소개</a>
-            <a>이용약관</a>
-            <a>개인정보처리방침</a>
-            <a>사업자 정보확인</a>
-            <a>제휴/입점 안내</a>
+            <Link to="#">회사소개</Link>
+            <Link to="#">이용약관</Link>
+            <Link to="#">개인정보처리방침</Link>
+            <Link to="#">사업자 정보확인</Link>
+            <Link to="#">제휴/입점 안내</Link>
           </div>
           <div className="info">
             <span>

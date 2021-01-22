@@ -45,15 +45,17 @@ export default class Navinfo extends Component {
           <ul>
             {CATEGORY_LIST.map((title, idx) => {
               return (
-                <span
-                  key={title}
-                  onMouseEnter={() => this.overHandler(idx + 1)}
-                  onMouseLeave={() => this.overHandler(0)}
-                  className="menuItem"
-                >
-                  <small>{title.small}</small>
-                  {title.category}
-                </span>
+                <Link to="/productlist" className="mainTitle">
+                  <span
+                    key={idx}
+                    onMouseEnter={() => this.overHandler(idx + 1)}
+                    onMouseLeave={() => this.overHandler(0)}
+                    className="menuItem"
+                  >
+                    <small>{title.small}</small>
+                    {title.category}
+                  </span>
+                </Link>
               );
             })}
           </ul>

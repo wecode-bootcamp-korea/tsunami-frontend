@@ -100,6 +100,9 @@ header {
       display: flex;
       margin: 0;
 
+      .mainTitle {
+        text-decoration: none;
+      }
       .menuItem {
         display: flex;
         flex-direction: column;

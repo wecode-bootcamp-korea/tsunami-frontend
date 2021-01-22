@@ -27,13 +27,7 @@ class Main extends Component {
   render() {
     const { bestSeller } = this.state;
     const { tsunamiStory } = this.state;
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    };
+
     return (
       <div>
         <Nav />
