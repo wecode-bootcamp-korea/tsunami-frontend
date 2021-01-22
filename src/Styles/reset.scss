@@ -1,13 +1,8 @@
-body {
-  background-color: white;
-  font-family: 'Noto Sans KR', sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-a {text-decoration: none; outline: none; color: black;}
-
-a:hover, a:active {text-decoration: underline; }
-
-ul {
-  list-style: none;
-  padding-left: 0px;
+body {
+  background-color: #fafafa;
 }
